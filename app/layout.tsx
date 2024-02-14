@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   title: "Portfolio | Hammad Wasi",
   description:
     "Wasi (HE/HIM) is a seasoned Frontend Engineer with a knack for crafting captivating user interfaces that elevate user experiences. Specializing in React and Next.js, he excels in turning complex ideas into engaging, interactive web solutions.",
-  icons: {
-    icon: "/favicon.svg",
-  },
+    icons: {
+      icon: "/favicon.svg",
+    },
 };
 
 export default function RootLayout({
