@@ -1,8 +1,30 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
+
+const links = [
+  { url: "", name: "LinkedIn" },
+  { url: "", name: "Twitter" },
+  { url: "", name: "Github" },
+  { url: "", name: "Discord" },
+];
 
 export default function Home() {
+  const [time, setTime] = useState("");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newTime = new Date().toLocaleTimeString("en-US", {
+        timeZone: "Asia/Karachi",
+        hour: "2-digit",
+        minute: "numeric",
+        hour12: true,
+      });
+      setTime(newTime);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <main className="main-grid relative">
       <section className="bg-grid bg-cover bg-gray-300 grid-hero sticky top-0 z-0">
@@ -37,24 +59,77 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="grid-about bg-black gap-10 text-white justify-between px-10 pt-36 pb-24 flex flex-wrap border-1 border-white rounded-t-xl relative z-10">
-        <h1 className="text-8xl sticky font-bold">About</h1>
-        <p className="px-4 text-xl max-w-[60vw] font-bold tracking-widest leading-10">
-          Wasi <span className="text-sm font-normal">(HE/HIM)</span> is a
-          seasoned Frontend Engineer with a knack for crafting captivating user
-          interfaces that elevate user experiences. Specializing in React and
-          Next.js, he excels in turning complex ideas into engaging, interactive
-          web solutions. With a background in Docker, AWS, and Kubernetes, Wasi
-          is adept at deploying robust and scalable frontend architectures.
-          Operating globally, he`s always on the move, bringing his unique blend
-          of technical acumen and creativity to every project he touches.
-        </p>
-      </div>
-      <section className="bg-slate-50 grid-footer fixed bottom-0 z-0 h-dvh">
-        <div className="">
-          
+      <div className="section-grid relative">
+        <div className="grid-about bg-black gap-10 text-white justify-between px-10 pt-36 pb-24 flex flex-wrap border-1 border-white rounded-t-xl relative z-10">
+          <h1 className="text-8xl sticky font-bold">About</h1>
+          <p className="px-4 text-xl max-w-[60vw] font-bold tracking-widest leading-10">
+            Wasi <span className="text-sm font-normal">(HE/HIM)</span> is a
+            seasoned Frontend Engineer with a knack for crafting captivating
+            user interfaces that elevate user experiences. Specializing in React
+            and Next.js, he excels in turning complex ideas into engaging,
+            interactive web solutions. With a background in Docker, AWS, and
+            Kubernetes, Wasi is adept at deploying robust and scalable frontend
+            architectures. Operating globally, he`s always on the move, bringing
+            his unique blend of technical acumen and creativity to every project
+            he touches.
+          </p>
         </div>
-      </section>
+        <section className="bg-slate-50 grid-footer sticky bottom-0 flex justify-center items-center">
+          <div className="flex flex-col gap-16">
+            <span className="inline-block py-8 border-2 border-black rounded-xl">
+              <Image
+                src={"/banner.svg"}
+                width={1300}
+                height={400}
+                alt="name"
+              ></Image>
+            </span>
+            <div className="flex text-2xl justify-between items-baseline">
+              <div className="flex flex-col gap-8 font-semibold">
+                <div className="flex items-center">
+                  Made with love and{" "}
+                  <div className="mx-4 flex gap-6">
+                    <Image
+                      src={"/next.svg"}
+                      width={100}
+                      height={40}
+                      alt="next"
+                    ></Image>
+                    <Image
+                      src={"/framer.svg"}
+                      width={30}
+                      height={40}
+                      alt="framer"
+                    ></Image>
+                    {/*<Image
+                      src={"/tailwind.svg"}
+                      width={60}
+                      height={40}
+                      alt="tailwind"
+                    ></Image> */}
+                  </div>{" "}
+                  in Lahore, Pakistan.
+                </div>
+                <div className="font-bold flex gap-3 text-5xl">
+                  <span className="text-slate-500">Local time</span>
+                  <span className="text-slate-500">-</span>
+                  <p>{time}</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4 w-[36vw] max-md:w-full">
+                {links.map((link) => (
+                  <Link href={link.url} key={link.name}>
+                    <div className="flex justify-between border border-black gap-3 px-3 py-4 rounded-xl">
+                      <span>{link.name}</span>
+                      <p>↗</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }

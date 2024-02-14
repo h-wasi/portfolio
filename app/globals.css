@@ -4,14 +4,18 @@
 
 .main-grid {
   display: grid;
-  grid-template-rows: 100dvh 40rem 100dvh;
-  grid-template-areas:
-    "hero"
-    "about"
-    "footer";
+  grid-template-rows: 100dvh auto;
+  grid-template-areas: "hero";
 }
 .grid-hero {
   grid-area: hero;
+}
+.section-grid {
+  display: grid;
+  grid-template-rows: 100vh 100dvh; /*change it into 70vh 100dvh */
+  grid-template-areas:
+    "about"
+    "footer";
 }
 .grid-about {
   grid-area: about;
