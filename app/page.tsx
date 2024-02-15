@@ -76,7 +76,7 @@ export default function Home() {
         </div>
         <section className="bg-slate-50 grid-footer sticky bottom-0 flex justify-center items-center">
           <div className="flex flex-col gap-16">
-            <span className="inline-block py-8 border-2 border-black rounded-xl">
+            <span className="inline-block py-8 px-4 border-2 border-black rounded-xl">
               <Image
                 src={"/banner.svg"}
                 width={1300}
