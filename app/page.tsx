@@ -2,8 +2,9 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { Separator } from "@radix-ui/react-dropdown-menu";
 
 const links = [
   { url: "", name: "LinkedIn" },
@@ -11,11 +12,22 @@ const links = [
   { url: "https://github.com/h-wasi", name: "Github" },
   { url: "https://discord.com/users/1157004264837754890", name: "Discord" },
 ];
+const sections = [
+  { url: "#about", name: "About" },
+  { url: "#skills", name: "Skills" },
+  { url: "#projects", name: "Projects" },
+  { url: "#contact", name: "Contact" },
+];
 
 const info = "MERN DEVELOPER, DESIGNING DIGITAL PRODUCTS & BRANDS.";
 export default function Home() {
   const [time, setTime] = useState("");
   const [isOpen, setIsOpen] = useState("false");
+  const ref = useRef(null);
+  const ref2 = useRef(null);
+
+  const isInView = useInView(ref, { margin: "-250px" });
+  const controls = useAnimation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,6 +41,14 @@ export default function Home() {
     }, 1000);
     return () => clearInterval(interval);
   }, []);
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, isInView]);
+
   return (
     <main className="main-grid relative">
       <section className="bg-grid bg-cover grid-hero sticky top-0 z-0">
@@ -112,20 +132,26 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="section-grid relative">
-        <div className="grid-about bg-black gap-10 text-white justify-between items-center px-10 max-md:text-center py-6 flex flex-wrap rounded-t-xl relative z-10 -mt-[.20rem]">
+      <div className="section-grid relative" ref={ref}>
+        <div
+          className="grid-about bg-black gap-10 text-white justify-center items-center px-10 max-md:text-center py-6 flex flex-wrap rounded-t-xl relative z-10 -mt-[.20rem]"
+          id="about"
+        >
           <motion.div
-            initial={{ translateY: 100 }}
-            animate={{ translateY: 0 }} //    FIXME:           add inView animation here
+            initial={{ translateY: 200 }}
+            animate={controls}
+            variants={{
+              visible: { translateY: 0 },
+              hidden: { translateY: 200 },
+            }}
             transition={{
               duration: 0.5,
-              delay: 0.1,
               type: "tween",
               ease: "backOut",
             }}
-            className="fixed blur-[.6px] z-20 bottom-3 left-0 w-full flex justify-center items-center max-md:hidden"
+            className="fixed blur-[.6px] z-20 bottom-5 flex justify-center backdrop-blur-lg items-center max-md:hidden w-[45%] lg:w-[35%]"
           >
-            <div className="flex items-center justify-center gap-8 border border-gray-500 rounded-xl bg-black/85 px-4 py-5 w-[45%] lg:w-[35%]">
+            <div className="flex items-center justify-center gap-8 border border-gray-900 rounded-xl py-2 w-full bg-black/50">
               <div>
                 <Link href={"/"}>
                   <Image
@@ -137,16 +163,21 @@ export default function Home() {
                 </Link>
               </div>
               <div className="flex justify-between gap-3 items-center">
-                <p>div</p>
-                <p>div</p>
-                <p>div</p>
+                {sections.map((section) => (
+                  <Link href={section.url} key={section.url}>
+                    {section.name}
+                  </Link>
+                ))}
               </div>
             </div>
           </motion.div>
-          <h1 className="max-md:text-3xl max-lg:text-5xl lg:text-7xl sticky font-bold">
+          <motion.h1
+            className="max-md:text-3xl max-lg:text-5xl lg:text-7xl sticky font-bold"
+            //add stagger animation
+          >
             About
-          </h1>
-          <p className="px-4 text-xl md:max-w-[60vw] md:font-bold md:tracking-widest md:leading-10">
+          </motion.h1>
+          <motion.p className="px-4 text-xl md:max-w-[60vw] md:font-bold md:tracking-widest md:leading-10">
             Wasi <span className="text-sm font-normal">(HE/HIM)</span> is a
             seasoned Frontend Engineer with a knack for crafting captivating
             user interfaces that elevate user experiences. Specializing in React
@@ -156,7 +187,7 @@ export default function Home() {
             architectures. Operating globally, he`s always on the move, bringing
             his unique blend of technical acumen and creativity to every project
             he touches.
-          </p>
+          </motion.p>
         </div>
         <section className="bg-slate-50 grid-footer sticky bottom-0 flex justify-center items-center px-6">
           <div className="flex flex-col gap-16">
