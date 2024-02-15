@@ -78,7 +78,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center">
-          {/* add banner here */}
+          {/*  TODO:   add banner here */}
           <Image
             className="absolute bottom-0"
             src={"/6392099811d7727f54b99e1d_Group 89-min-p-1080.png"}
@@ -116,7 +116,7 @@ export default function Home() {
         <div className="grid-about bg-black gap-10 text-white justify-between items-center px-10 max-md:text-center py-6 flex flex-wrap rounded-t-xl relative z-10 -mt-[.20rem]">
           <motion.div
             initial={{ translateY: 100 }}
-            animate={{ translateY: 0 }}
+            animate={{ translateY: 0 }} //    FIXME:           add inView animation here
             transition={{
               duration: 0.5,
               delay: 0.1,
