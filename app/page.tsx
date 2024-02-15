@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 
 const links = [
   { url: "", name: "LinkedIn" },
-  { url: "", name: "Twitter" },
-  { url: "", name: "Github" },
-  { url: "", name: "Discord" },
+  { url: "https://twitter.com/h-wasi", name: "Twitter" },
+  { url: "https://github.com/h-wasi", name: "Github" },
+  { url: "https://discord.com/users/1157004264837754890", name: "Discord" },
 ];
 
 export default function Home() {
