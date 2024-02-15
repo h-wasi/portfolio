@@ -101,12 +101,6 @@ export default function Home() {
                       height={40}
                       alt="framer"
                     ></Image>
-                    {/*<Image
-                      src={"/tailwind.svg"}
-                      width={60}
-                      height={40}
-                      alt="tailwind"
-                    ></Image> */}
                   </div>{" "}
                   in Lahore, Pakistan.
                 </div>
@@ -118,7 +112,7 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-[36vw] max-md:w-full">
                 {links.map((link) => (
-                  <Link href={link.url} key={link.name}>
+                  <Link href={link.url} target="_blank" key={link.name}>
                     <div className="flex justify-between border border-black gap-3 px-3 py-4 rounded-xl">
                       <span>{link.name}</span>
                       <p>↗</p>
