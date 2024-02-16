@@ -97,7 +97,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="overflow-hidden absolute h-[50%] top-[30%] flex items-center">
+          <div className="overflow-hidden absolute h-[50%] top-[30%] flex items-center w-[99%]">
             <motion.div
               initial={{ translateX: 1000, scale: 2.2 }}
               animate={{ translateX: -10000 }}
@@ -193,9 +193,9 @@ export default function Home() {
               type: "tween",
               ease: "backOut",
             }}
-            className="fixed blur-[.6px] z-20 bottom-5 flex justify-center backdrop-blur-lg items-center max-md:hidden w-[40%] lg:w-[25%]"
+            className="fixed z-20 bottom-5 flex justify-center items-center max-md:hidden"
           >
-            <div className="flex items-center justify-between px-6 gap-8 border border-gray-600 rounded-xl py-2 w-full bg-black/50">
+            <div className="backdrop-blur-2xl flex items-center justify-between px-4 gap-8 border border-gray-600 rounded-xl py-2 w-full bg-black/50">
               <Link href={"/"}>
                 <Image
                   src={"/logo.svg"}
@@ -219,7 +219,7 @@ export default function Home() {
           >
             About
           </motion.h1>
-          <motion.p className="px-4 text-xl md:max-w-[60vw] md:font-bold md:tracking-widest md:leading-10">
+          <motion.p className="px-4 text-xl max-sm:text-[1rem] md:max-w-[60vw] md:font-bold md:tracking-widest md:leading-10">
             Wasi <span className="text-sm font-normal">(HE/HIM)</span> is a
             seasoned Frontend Engineer with a knack for crafting captivating
             user interfaces that elevate user experiences. Specializing in React
@@ -231,10 +231,7 @@ export default function Home() {
             he touches.
           </motion.p>
         </div>
-        <section
-          className="bg-slate-50 grid-footer sticky bottom-0 flex justify-center items-center px-6"
-          id="contact"
-        >
+        <section className="bg-slate-50 grid-footer sticky bottom-0 flex justify-center items-center px-6">
           <div className="flex flex-col gap-16">
             <span className="inline-block py-8 px-4 border-2 border-black rounded-xl">
               <Image
@@ -246,7 +243,7 @@ export default function Home() {
             </span>
             <div className="flex flex-wrap text-2xl justify-between items-baseline gap-4">
               <div className="flex flex-col gap-8 font-semibold flex-wrap">
-                <div className="flex items-center flex-wrap">
+                <div className="flex items-center flex-wrap sm:tex">
                   Made with love and{" "}
                   <div className="mx-4 flex gap-6">
                     <Image
@@ -255,6 +252,7 @@ export default function Home() {
                       height={40}
                       alt="next"
                     ></Image>
+                    +
                     <Image
                       src={"/framer.svg"}
                       width={30}
@@ -264,7 +262,7 @@ export default function Home() {
                   </div>{" "}
                   in Lahore, Pakistan.
                 </div>
-                <div className="font-bold flex gap-3 text-5xl">
+                <div className="font-bold flex gap-3 max-sm:text-2xl sm:text-5xl">
                   <span className="text-gray-500/80">Local time</span>
                   <span className="text-gray-500/80">-</span>
                   <p>{time}</p>
