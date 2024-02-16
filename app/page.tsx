@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { Separator } from "@radix-ui/react-dropdown-menu";
 
 const links = [
   { url: "", name: "LinkedIn" },
@@ -14,8 +13,8 @@ const links = [
 ];
 const sections = [
   { url: "#about", name: "About" },
-  { url: "#skills", name: "Skills" },
   { url: "#projects", name: "Projects" },
+  { url: "#skills", name: "Skills" },
   { url: "#contact", name: "Contact" },
 ];
 
@@ -50,7 +49,7 @@ export default function Home() {
   }, [controls, isInView]);
 
   return (
-    <main className="main-grid relative">
+    <main className="main-grid relative font-sans scroll-smooth">
       <section className="bg-grid bg-cover grid-hero sticky top-0 z-0">
         <motion.div
           initial={{ opacity: 0, translateY: -200 }}
@@ -70,7 +69,6 @@ export default function Home() {
               childStyles="3.7rem"
             />
           ))}
-
           <Button
             className={`bg-black hover:bg-slate-800 text-white border rounded-xl`}
             onClick={() => setIsOpen("false")}
@@ -98,7 +96,51 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center">
-          {/*  TODO:   add banner here */}
+          <div className="overflow-hidden absolute h-[50%] top-[30%] flex items-center">
+            <motion.div
+              initial={{ translateX: 1000, scale: 2.2 }}
+              animate={{ opacity: 1, translateX: -10000 }}
+              transition={{
+                duration: 35,
+                repeat: Infinity,
+                repeatDelay: -0.8,
+                repeatType: "loop",
+                type: "linear",
+              }}
+              className="flex gap-24 w-full"
+            >
+              <Image
+                src={"/banner.svg"}
+                width={2000}
+                height={2000}
+                alt="Banner"
+              ></Image>
+              <Image
+                src={"/banner.svg"}
+                width={2000}
+                height={2000}
+                alt="Banner"
+              ></Image>
+              <Image
+                src={"/banner.svg"}
+                width={2000}
+                height={2000}
+                alt="Banner"
+              ></Image>
+              <Image
+                src={"/banner.svg"}
+                width={2000}
+                height={2000}
+                alt="Banner"
+              ></Image>
+              <Image
+                src={"/banner.svg"}
+                width={2000}
+                height={2000}
+                alt="Banner"
+              ></Image>
+            </motion.div>
+          </div>
           <Image
             className="absolute bottom-0"
             src={"/6392099811d7727f54b99e1d_Group 89-min-p-1080.png"}
@@ -106,20 +148,21 @@ export default function Home() {
             height={900}
             alt="hero"
           ></Image>
-          <div className="justify-between gap-3 items-center absolute bottom-36 left-5 flex max-md:hidden">
-            <div className="border px-3 py-2 border-black rounded-xl flex justify-center">
+          <div className="justify-between gap-3 items-center absolute max-md:bottom-36 bottom-7 left-5 flex">
+            <div className="border px-3 py-1 border-black rounded-xl flex justify-center">
               <motion.p
-                initial={{ scale: 1.5 }}
+                // initial={false}
                 animate={{
-                  translateY: [-10, 0, 0, 0, 10],
+                  scale: 1.4,
+                  translateY: [-16, -3, -3, -3, 6],
                   opacity: [0, 1, 1, 1, 0],
                 }}
                 transition={{
-                  duration: 1.4,
+                  duration: 1.7,
                   type: "tween",
                   ease: "linear",
                   repeat: Infinity,
-                  repeatDelay: 0.3,
+                  repeatDelay: 0.7,
                   repeatType: "loop",
                 }}
               >
@@ -149,30 +192,28 @@ export default function Home() {
               type: "tween",
               ease: "backOut",
             }}
-            className="fixed blur-[.6px] z-20 bottom-5 flex justify-center backdrop-blur-lg items-center max-md:hidden w-[45%] lg:w-[35%]"
+            className="fixed blur-[.6px] z-20 bottom-5 flex justify-center backdrop-blur-lg items-center max-md:hidden w-[40%] lg:w-[25%]"
           >
-            <div className="flex items-center justify-center gap-8 border border-gray-900 rounded-xl py-2 w-full bg-black/50">
-              <div>
-                <Link href={"/"}>
-                  <Image
-                    src={"/logo.svg"}
-                    width={50}
-                    height={60}
-                    alt="logo"
-                  ></Image>
+            <div className="flex items-center justify-between px-6 gap-8 border border-gray-600 rounded-xl py-2 w-full bg-black/50">
+              <Link href={"/"}>
+                <Image
+                  src={"/logo.svg"}
+                  width={50}
+                  height={60}
+                  alt="logo"
+                ></Image>
+              </Link>
+              {/* <div className="flex justify-between gap-3 items-center"> */}
+              {sections.map((section) => (
+                <Link href={section.url} key={section.url} className="text-sm">
+                  {section.name}
                 </Link>
-              </div>
-              <div className="flex justify-between gap-3 items-center">
-                {sections.map((section) => (
-                  <Link href={section.url} key={section.url}>
-                    {section.name}
-                  </Link>
-                ))}
-              </div>
+              ))}
+              {/* </div> */}
             </div>
           </motion.div>
           <motion.h1
-            className="max-md:text-3xl max-lg:text-5xl lg:text-7xl sticky font-bold"
+            className="max-lg:text-5xl lg:text-7xl sticky font-bold"
             //add stagger animation
           >
             About
@@ -220,8 +261,8 @@ export default function Home() {
                   in Lahore, Pakistan.
                 </div>
                 <div className="font-bold flex gap-3 text-5xl">
-                  <span className="text-slate-500">Local time</span>
-                  <span className="text-slate-500">-</span>
+                  <span className="text-gray-500/80">Local time</span>
+                  <span className="text-gray-500/80">-</span>
                   <p>{time}</p>
                 </div>
               </div>

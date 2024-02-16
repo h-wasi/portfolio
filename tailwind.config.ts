@@ -10,6 +10,7 @@ const config = {
   ],
   prefix: "",
   theme: {
+    fontFamily: { sans: ["Segoe UI"] },
     container: {
       center: true,
       padding: "2rem",
