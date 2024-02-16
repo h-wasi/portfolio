@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import Smooth from "@/components/Smooth";
 
 const links = [
   { url: "", name: "LinkedIn" },
