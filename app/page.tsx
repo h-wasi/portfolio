@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import Smooth from "@/components/Smooth";
 
 const links = [
   { url: "", name: "LinkedIn" },
@@ -50,7 +51,7 @@ export default function Home() {
 
   return (
     <main className="main-grid relative font-sans scroll-smooth">
-      <section className="bg-grid bg-cover grid-hero sticky top-0 z-0">
+      <section className="bg-grid bg-cover bg-slate-300/20 grid-hero sticky top-0 z-0">
         <motion.div
           initial={{ opacity: 0, translateY: -200 }}
           animate={isOpen}
@@ -99,11 +100,11 @@ export default function Home() {
           <div className="overflow-hidden absolute h-[50%] top-[30%] flex items-center">
             <motion.div
               initial={{ translateX: 1000, scale: 2.2 }}
-              animate={{ opacity: 1, translateX: -10000 }}
+              animate={{ translateX: -10000 }}
               transition={{
-                duration: 35,
+                duration: 17,
                 repeat: Infinity,
-                repeatDelay: -0.8,
+                repeatDelay: -7,
                 repeatType: "loop",
                 type: "linear",
               }}
@@ -144,7 +145,7 @@ export default function Home() {
           <Image
             className="absolute bottom-0"
             src={"/6392099811d7727f54b99e1d_Group 89-min-p-1080.png"}
-            width={800}
+            width={880}
             height={900}
             alt="hero"
           ></Image>
