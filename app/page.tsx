@@ -231,7 +231,10 @@ export default function Home() {
             he touches.
           </motion.p>
         </div>
-        <section className="bg-slate-50 grid-footer sticky bottom-0 flex justify-center items-center px-6">
+        <section
+          className="bg-slate-50 grid-footer sticky bottom-0 flex justify-center items-center px-6"
+          id="contact"
+        >
           <div className="flex flex-col gap-16">
             <span className="inline-block py-8 px-4 border-2 border-black rounded-xl">
               <Image
