@@ -88,11 +88,12 @@ export default function Home() {
             </Link>
             <p className="text-[14px] max-md:text-center">{info}</p>
           </div>
-          <div className="flex gap-2 items-center border rounded-xl px-2 shadow-md hover:shadow-sm max-md:hidden">
+          <div
+            className="flex gap-2 items-center border rounded-xl px-2 shadow-md hover:shadow-sm max-md:hidden cursor-pointer"
+            onClick={() => setIsOpen("true")}
+          >
             <Image src={"/tree.svg"} width={20} height={20} alt="logo"></Image>
-            <Button className="text-sm" onClick={() => setIsOpen("true")}>
-              Link Tree
-            </Button>
+            <Button className="text-sm">Link Tree</Button>
           </div>
         </div>
         <div className="flex justify-center">
