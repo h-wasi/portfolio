@@ -149,17 +149,17 @@ export default function Home() {
             height={900}
             alt="hero"
           ></Image>
-          <div className="justify-between gap-3 items-center absolute max-md:bottom-36 bottom-7 left-5 flex">
+          <div className="justify-between gap-3 items-center absolute max-sm:hidden max-md:bottom-36 bottom-7 left-5 flex">
             <div className="border px-3 py-1 border-black rounded-xl flex justify-center">
               <motion.p
                 // initial={false}
                 animate={{
-                  scale: 1.4,
-                  translateY: [-16, -3, -3, -3, 6],
+                  scaleX: 1.7,
+                  translateY: [-16, 0, 0, 6],
                   opacity: [0, 1, 1, 1, 0],
                 }}
                 transition={{
-                  duration: 1.7,
+                  duration: 1.6,
                   type: "tween",
                   ease: "linear",
                   repeat: Infinity,
@@ -170,7 +170,6 @@ export default function Home() {
                 &darr;
               </motion.p>
             </div>
-
             <span className="text-md">Scroll down</span>
           </div>
         </div>
@@ -242,8 +241,8 @@ export default function Home() {
               ></Image>
             </span>
             <div className="flex flex-wrap text-2xl justify-between items-baseline gap-4">
-              <div className="flex flex-col gap-8 font-semibold flex-wrap">
-                <div className="flex items-center flex-wrap sm:tex">
+              <div className="flex flex-col gap-8 font-semibold flex-wrap max-xl:w-full justify-center">
+                <div className="flex justify-center items-center flex-wrap">
                   Made with love and{" "}
                   <div className="mx-4 flex gap-6">
                     <Image
@@ -262,13 +261,13 @@ export default function Home() {
                   </div>{" "}
                   in Lahore, Pakistan.
                 </div>
-                <div className="font-bold flex gap-3 max-sm:text-2xl sm:text-5xl">
+                <div className="font-bold flex max-xl:justify-center gap-3 max-sm:text-2xl sm:text-5xl">
                   <span className="text-gray-500/80">Local time</span>
                   <span className="text-gray-500/80">-</span>
                   <p>{time}</p>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4 w-[36vw] max-lg:w-full relative">
+              <div className="grid grid-cols-2 gap-4 w-[36vw] max-xl:w-full relative">
                 {links.map((link) => (
                   <SubLink
                     link={link}
@@ -312,7 +311,7 @@ function SubLink({
           // transition={}
           className={`absolute top-0 bg-black w-full ${childStyles} -z-10 rounded-xl`}
         ></motion.span>
-        <div className="flex relative justify-between border border-black gap-3 px-3 py-4 rounded-xl hover:px-8 transition-all duration-700">
+        <div className="flex relative max-md:text-sm justify-between border border-black gap-3 px-3 py-4 rounded-xl hover:px-8 transition-all duration-700">
           <span>{link.name}</span>
           <p>↗</p>
         </div>
