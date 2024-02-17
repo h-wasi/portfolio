@@ -12,7 +12,8 @@ export const sections = [
   { url: "#projects", name: "Projects" },
   { url: "#contact", name: "Contact" },
 ];
-export const info = "MERN DEVELOPER, DESIGNING DIGITAL PRODUCTS & BRANDS.";
+export const info =
+  "DIGITAL CRAFTSMAN, CRAFTING INNOVATIVE WEB EXPERIENCES WITH MERN";
 
 export const skillIcons = [
   { url: "/file.svg", name: "name", description: "loremvdacjadkjsD" },
