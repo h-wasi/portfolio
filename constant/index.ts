@@ -13,3 +13,11 @@ export const sections = [
   { url: "#contact", name: "Contact" },
 ];
 export const info = "MERN DEVELOPER, DESIGNING DIGITAL PRODUCTS & BRANDS.";
+
+export const skillIcons = [
+  { url: "/file.svg", name: "name", description: "loremvdacjadkjsD" },
+  { url: "/file.svg", name: "name", description: "loremvdacjadkjsD" },
+  { url: "/file.svg", name: "name", description: "loremvdacjadkjsD" },
+  { url: "/file.svg", name: "name", description: "loremvdacjadkjsD" },
+  { url: "/file.svg", name: "name", description: "loremvdacjadkjsD" },
+];
