@@ -57,21 +57,52 @@ export function Marque() {
 
 export function SkillsMarque() {
   return (
-    <div className="skill col-span-8 row-span-1 border">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
-      maxime quos eaque iure tenetur ad vel nulla sapiente quidem unde, possimus
-      libero iste, nemo molestias dolor qui. Laudantium, eum ad?
+    <div className="skill rounded-xl bg-black">
+      <motion.div
+        initial={{ translateX: 0, opacity: 0 }}
+        animate={{ translateX: -5200, opacity: 1 }}
+        transition={{
+          duration: 11,
+          repeat: Infinity,
+          repeatType: "loop",
+          type: "tween",
+          opacity: {
+            duration: 1,
+          },
+        }}
+        className="h-full flex text-white gap-8 text-[6.4rem] select-none items-center justify-between"
+      >
+        {/* Frontend */}
+        <h1>Framer</h1>
+        <h1>
+          Next<span className="text-3xl">.js</span>
+        </h1>
+        <h1>RadixUI</h1>
+        <h1>TypeScript</h1>
+        <h1>JavaScript</h1>
+        <h1>
+          Tailwind<span className="text-3xl">css</span>
+        </h1>
+        {/* Backend */}
+        <h1>
+          Node<span className="text-3xl">.js</span>
+        </h1>
+        <h1>MongoDB</h1>
+        <h1>
+          Express<span className="text-3xl">.js</span>
+        </h1>
+        <h1>Prisma</h1>
+        {/* Cloud */}
+        <h1>Docker</h1>
+        <h1>Kubernetes</h1>
+        <h1>AWS</h1>
+        {/* WebScraping */}
+        <h1>BrightData</h1>
+        {/* Misce.... */}
+        <h1>NextAuth</h1>
+        <h1>Clerk</h1>
+        <h1>CronJobs</h1>
+      </motion.div>
     </div>
-    // <motion.div
-    //   initial={{ translateX: 100 }}
-    //   animate={{ translateX: 0 }}
-    //   transition={{
-    //     duration: 4,
-    //     repeat: Infinity,
-    //     repeatType: "loop",
-    //     type: "linear",
-    //   }}
-    //   className="h-[20vh] flex gap-8 w-[95vw] select-none items-center justify-between"
-    // ></motion.div>
   );
 }

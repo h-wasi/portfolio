@@ -88,7 +88,7 @@ export default function Home() {
           className="fixed w-screen z-30 bottom-5 flex justify-center max-md:hidden"
         >
           <div className="flex justify-center items-center w-screen">
-            <div className="backdrop-blur-2xl flex items-center justify-between w-[22.6rem] px-4 gap-8 border border-gray-600 rounded-xl py-2 bg-black/50">
+            <div className="backdrop-blur-2xl flex items-center justify-between w-[22.6rem] px-4 gap-8 border border-gray-800/70 rounded-xl py-2 bg-black/50">
               <Link href={"/"}>
                 <Image
                   draggable="false"
@@ -161,36 +161,27 @@ export default function Home() {
                 </motion.p>
               </div>
               <div //
-                className="bg-emerald-400 xl:deep-gridd deep-gridm grid-skills gap-4 h-[140vh] max-xl:h-[205vh] py-4 px-6 transition-all duration-1000"
+                className="xl:deep-gridd deep-gridm bg-gray-600 bg-grid grid-skills gap-4 h-[100vh] max-xl:h-[205vh] py-4 px-6 transition-all duration-1000"
                 id="skills"
               >
                 <SkillsMarque />
-                <div className="border frontend border-gray-400">Frontend</div>
-                <div className="backend border border-gray-400">Backend</div>
-                <div className="cloud border border-gray-400">Cloud</div>
-                <div className="web-scraping border border-gray-400 rounded-xl">
-                  Web Scraping
-                </div>
-                <div className="Miscellaneous border border-gray-400 rounded-xl">
-                  Miscellaneous
-                </div>
-                {/* <div className="border fr border-gray-400 rounded-xl h-[47%] max-md:h-[34vh] max-md:w-full w-[47%]">
+                <div className="border frontend border-pink-700  rounded-xl">
                   Frontend
                 </div>
-                <div className="border border-gray-400 rounded-xl h-[47%] max-md:h-[34vh] max-md:w-full w-[47%] bc">
+                <div className="backend border border-pink-700 rounded-xl">
                   Backend
                 </div>
-                <div className="cl border border-gray-400 rounded-xl h-[47%] max-md:h-[34vh] max-md:w-full w-[37%]">
+                <div className="cloud border border-pink-700 rounded-xl">
                   Cloud
                 </div>
-                <div className="web border border-gray-400 rounded-xl h-[47%] max-md:h-[34vh] max-md:w-full w-[30%] ">
+                <div className="web-scraping border border-pink-700 rounded-xl">
                   Web Scraping
                 </div>
-                <div className="misc border border-gray-400 rounded-xl h-[47%] max-md:h-[34vh] max-md:w-full w-[25%]">
+                <div className="Miscellaneous border border-pink-700 rounded-xl">
                   Miscellaneous
-                </div> */}
+                </div>
               </div>
-              <div className="bg-pink-300 grid-projects" id="projects">
+              <div className="bg-purple-600 grid-projects" id="projects">
                 Projects
               </div>
               <div className="bg-orange-300 grid-catch" id="catchme">
