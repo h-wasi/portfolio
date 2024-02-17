@@ -140,11 +140,11 @@ export default function Home() {
                 </h1>
                 <motion.p
                   ref={ref2}
-                  initial={{ opacity: 0, translateX: 250 }}
+                  initial={{ opacity: 0, translateX: 200 }}
                   animate={controls2}
                   variants={{
                     visible: { opacity: 1, translateX: 0 },
-                    hidden: { opacity: 0, translateX: 250 },
+                    hidden: { opacity: 0, translateX: 200 },
                   }}
                   transition={{ duration: 2.6, type: "spring" }}
                   className="px-4 text-lg max-sm:text-[1rem] md:max-w-[60vw] md:font-bold"
