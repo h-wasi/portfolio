@@ -7,7 +7,7 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 import { LinkComponent } from "../components/LinkComponent";
 import { links, sections } from "@/constant";
 import Time from "@/components/Time";
-import Marque from "@/components/Marque";
+import { Marque, SkillsMarque } from "@/components/Marque";
 import { LinkTree } from "@/components/LinkTree";
 
 export default function Home() {
@@ -85,10 +85,10 @@ export default function Home() {
             type: "tween",
             ease: "backOut",
           }}
-          className="fixed w-full z-30 bottom-5 flex justify-center max-md:hidden"
+          className="fixed w-screen z-30 bottom-5 flex justify-center max-md:hidden"
         >
-          <div className="flex justify-center items-center w-full">
-            <div className="backdrop-blur-2xl flex items-center justify-between w-[30%] px-4 gap-8 border border-gray-600 rounded-xl py-2 bg-black/50">
+          <div className="flex justify-center items-center w-screen">
+            <div className="backdrop-blur-2xl flex items-center justify-between w-[22.6rem] px-4 gap-8 border border-gray-600 rounded-xl py-2 bg-black/50">
               <Link href={"/"}>
                 <Image
                   draggable="false"
@@ -117,7 +117,6 @@ export default function Home() {
             ref={ref}
           >
             <div className="middle-grid">
-              {/* <div className="fixed"></div> */}
               <div
                 id="about"
                 className="px-10 overflow-hidden h-full rounded-t-xl items-center justify-center py-6 flex flex-wrap bg-black gap-10 text-white w-full"
@@ -161,25 +160,35 @@ export default function Home() {
                   project he touches.
                 </motion.p>
               </div>
-              <div
-                className="bg-emerald-400 grid-skills flex max-md:flex-col flex-wrap justify-center gap-6 items-center h-[100vh] max-xl:h-[200vh] py-8 px-6"
+              <div //max-xl:flex max-xl:flex-col justify-center items-center
+                className="bg-emerald-400 grid xl:deep-grid deep-gridm grid-skills gap-4 h-[140vh] max-xl:h-[205vh] py-4 px-6"
                 id="skills"
               >
-                <div className="border border-gray-400 h-[47%] max-xl:h-[37%] max-xl:w-full w-[47%]">
-                  Frontend
-                </div>
-                <div className="border border-gray-400 h-[47%] max-xl:h-[37%] max-xl:w-full w-[47%]">
-                  Backend
-                </div>
-                <div className="border border-gray-400 h-[47%] max-xl:h-[37%] max-xl:w-full w-[37%]">
-                  Cloud
-                </div>
-                <div className="border border-gray-400 h-[47%] max-xl:h-[37%] max-xl:w-full w-[30%]">
+                <SkillsMarque />
+                <div className="border fr border-gray-400">Frontend</div>
+                <div className="border border-gray-400 bc">Backend</div>
+                <div className="cl border border-gray-400">Cloud</div>
+                <div className="web border border-gray-400 rounded-xl">
                   Web Scraping
                 </div>
-                <div className="border border-gray-400 h-[47%] max-xl:h-[37%] max-xl:w-full w-[25%]">
+                <div className="misc border border-gray-400 rounded-xl">
                   Miscellaneous
                 </div>
+                {/* <div className="border fr border-gray-400 rounded-xl h-[47%] max-md:h-[34vh] max-md:w-full w-[47%]">
+                  Frontend
+                </div>
+                <div className="border border-gray-400 rounded-xl h-[47%] max-md:h-[34vh] max-md:w-full w-[47%] bc">
+                  Backend
+                </div>
+                <div className="cl border border-gray-400 rounded-xl h-[47%] max-md:h-[34vh] max-md:w-full w-[37%]">
+                  Cloud
+                </div>
+                <div className="web border border-gray-400 rounded-xl h-[47%] max-md:h-[34vh] max-md:w-full w-[30%] ">
+                  Web Scraping
+                </div>
+                <div className="misc border border-gray-400 rounded-xl h-[47%] max-md:h-[34vh] max-md:w-full w-[25%]">
+                  Miscellaneous
+                </div> */}
               </div>
               <div className="bg-pink-300 grid-projects" id="projects">
                 Projects

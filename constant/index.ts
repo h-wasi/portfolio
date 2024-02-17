@@ -8,8 +8,8 @@ export const links = [
 ];
 export const sections = [
   { url: "#about", name: "About" },
-  { url: "#projects", name: "Projects" },
   { url: "#skills", name: "Skills" },
+  { url: "#projects", name: "Projects" },
   { url: "#contact", name: "Contact" },
 ];
 export const info = "MERN DEVELOPER, DESIGNING DIGITAL PRODUCTS & BRANDS.";

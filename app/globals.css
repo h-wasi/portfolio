@@ -2,77 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-.main-grid {
-  display: grid;
-  grid-template-rows: 100vh auto;
-  grid-template-areas: "hero";
-}
-.grid-hero {
-  grid-area: hero;
-}
-/* -----        static grid -                                     */
-.section-grid {
-  display: grid;
-  grid-template-rows: auto 100vh; /*change it into 70vh 100dvh */
-  grid-template-areas:
-    "static"
-    "footer";
-}
-.grid-footer {
-  grid-area: footer;
-}
-.grid-static {
-  grid-area: static;
-}
-/* -----        middle grid -                                     */
-.middle-grid {
-  display: grid;
-  grid-template-rows: 80vh auto repeat(2, 100vh); /*change it into 70vh 100dvh */
-  grid-template-areas:
-    "about"
-    "skills"
-    "projects"
-    "catch";
-}
-.grid-about {
-  grid-area: about;
-}
-.grid-skills {
-  grid-area: skills;
-}
-.grid-projects {
-  grid-area: projects;
-}
-.grid-catch {
-  grid-area: catch;
-}
+@layer utilities {
+  .main-grid {
+    display: grid;
+    grid-template-rows: 100vh auto;
+    grid-template-areas: "hero";
+  }
+  .grid-hero {
+    grid-area: hero;
+  }
+  /* -----        static grid -                                     */
+  .section-grid {
+    display: grid;
+    grid-template-rows: auto 100vh; /*change it into 70vh 100dvh */
+    grid-template-areas:
+      "static"
+      "footer";
+  }
+  .grid-footer {
+    grid-area: footer;
+  }
+  .grid-static {
+    grid-area: static;
+  }
+  /* -----        middle grid -                                     */
+  .middle-grid {
+    display: grid;
+    grid-template-rows: 80vh auto repeat(2, 100vh); /*change it into 70vh 100dvh */
+    grid-template-areas:
+      "about"
+      "skills"
+      "projects"
+      "catch";
+  }
+  .grid-about {
+    grid-area: about;
+  }
+  .grid-skills {
+    grid-area: skills;
+  }
+  .grid-projects {
+    grid-area: projects;
+  }
+  .grid-catch {
+    grid-area: catch;
+  }
+  /* -----                                deepgrid grid                                                            */
 
-/* -----        font -                                     */
-@font-face {
-  font-family: "Segoe UI";
-  src: url("/fonts/Segoe UI.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Segoe UI";
-  src: url("/fonts/Segoe UI Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Segoe UI";
-  src: url("/fonts/Segoe UI Bold Italic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Segoe UI";
-  src: url("/fonts/Segoe UI Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+  .sk {
+    grid-area: sk;
+    overflow: hidden;
+  }
+  .fr {
+    grid-area: fr;
+  }
+  .bc {
+    grid-area: bc;
+  }
+  .cl {
+    grid-area: cl;
+  }
+  .web {
+    grid-area: web;
+  }
+  .misc {
+    grid-area: misc;
+  }
+  .deep-gridm {
+    grid-template-rows: 20vh repeat(5, 34vh);
+    grid-template-areas:
+      "sk"
+      "fr"
+      "bc"
+      "cl"
+      "web"
+      "misc";
+  }
+  .deep-grid {
+    display: grid;
+    grid-template-rows: 20vh repeat(2, 1fr) !important;
+    grid-template-columns: repeat(8, 1fr) !important;
+    grid-template-areas:
+      "sk sk sk sk sk sk sk "
+      "fr fr fr fr bc bc bc bc"
+      "cl cl cl web web web misc misc" !important;
+  }
+  /* -----        font -                                     */
+  @font-face {
+    font-family: "Segoe UI";
+    src: url("/fonts/Segoe UI.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Segoe UI";
+    src: url("/fonts/Segoe UI Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Segoe UI";
+    src: url("/fonts/Segoe UI Bold Italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Segoe UI";
+    src: url("/fonts/Segoe UI Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
 }
