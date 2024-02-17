@@ -10,19 +10,44 @@
 .grid-hero {
   grid-area: hero;
 }
+/* -----        static grid -                                     */
 .section-grid {
   display: grid;
-  grid-template-rows: 100vh 100vh; /*change it into 70vh 100dvh */
+  grid-template-rows: auto 100vh; /*change it into 70vh 100dvh */
   grid-template-areas:
-    "about"
+    "static"
     "footer";
-}
-.grid-about {
-  grid-area: about;
 }
 .grid-footer {
   grid-area: footer;
 }
+.grid-static {
+  grid-area: static;
+}
+/* -----        middle grid -                                     */
+.middle-grid {
+  display: grid;
+  grid-template-rows: 80vh auto repeat(2, 100vh); /*change it into 70vh 100dvh */
+  grid-template-areas:
+    "about"
+    "skills"
+    "projects"
+    "catch";
+}
+.grid-about {
+  grid-area: about;
+}
+.grid-skills {
+  grid-area: skills;
+}
+.grid-projects {
+  grid-area: projects;
+}
+.grid-catch {
+  grid-area: catch;
+}
+
+/* -----        font -                                     */
 @font-face {
   font-family: "Segoe UI";
   src: url("/fonts/Segoe UI.ttf") format("truetype");

@@ -1,0 +1,15 @@
+import exp from "constants";
+
+export const links = [
+  { url: "", name: "LinkedIn" },
+  { url: "https://twitter.com/h-wasi", name: "Twitter" },
+  { url: "https://github.com/h-wasi", name: "Github" },
+  { url: "https://discord.com/users/1157004264837754890", name: "Discord" },
+];
+export const sections = [
+  { url: "#about", name: "About" },
+  { url: "#projects", name: "Projects" },
+  { url: "#skills", name: "Skills" },
+  { url: "#contact", name: "Contact" },
+];
+export const info = "MERN DEVELOPER, DESIGNING DIGITAL PRODUCTS & BRANDS.";
