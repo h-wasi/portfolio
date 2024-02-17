@@ -160,18 +160,18 @@ export default function Home() {
                   project he touches.
                 </motion.p>
               </div>
-              <div //max-xl:flex max-xl:flex-col justify-center items-center
-                className="bg-emerald-400 grid xl:deep-grid deep-gridm grid-skills gap-4 h-[140vh] max-xl:h-[205vh] py-4 px-6"
+              <div //
+                className="bg-emerald-400 xl:deep-gridd deep-gridm grid-skills gap-4 h-[140vh] max-xl:h-[205vh] py-4 px-6 transition-all duration-1000"
                 id="skills"
               >
                 <SkillsMarque />
-                <div className="border fr border-gray-400">Frontend</div>
-                <div className="border border-gray-400 bc">Backend</div>
-                <div className="cl border border-gray-400">Cloud</div>
-                <div className="web border border-gray-400 rounded-xl">
+                <div className="border frontend border-gray-400">Frontend</div>
+                <div className="backend border border-gray-400">Backend</div>
+                <div className="cloud border border-gray-400">Cloud</div>
+                <div className="web-scraping border border-gray-400 rounded-xl">
                   Web Scraping
                 </div>
-                <div className="misc border border-gray-400 rounded-xl">
+                <div className="Miscellaneous border border-gray-400 rounded-xl">
                   Miscellaneous
                 </div>
                 {/* <div className="border fr border-gray-400 rounded-xl h-[47%] max-md:h-[34vh] max-md:w-full w-[47%]">

@@ -49,43 +49,44 @@
   }
   /* -----                                deepgrid grid                                                            */
 
-  .sk {
-    grid-area: sk;
+  .skill {
+    grid-area: skill;
     overflow: hidden;
   }
-  .fr {
-    grid-area: fr;
+  .frontend {
+    grid-area: frontend;
   }
-  .bc {
-    grid-area: bc;
+  .backend {
+    grid-area: backend;
   }
-  .cl {
-    grid-area: cl;
+  .cloud {
+    grid-area: cloud;
   }
-  .web {
-    grid-area: web;
+  .web-scraping {
+    grid-area: web-scraping;
   }
-  .misc {
-    grid-area: misc;
+  .Miscellaneous {
+    grid-area: Miscellaneous;
   }
   .deep-gridm {
+    display: grid;
     grid-template-rows: 20vh repeat(5, 34vh);
     grid-template-areas:
-      "sk"
-      "fr"
-      "bc"
-      "cl"
-      "web"
-      "misc";
+      "skill"
+      "frontend"
+      "backend"
+      "cloud"
+      "web-scraping"
+      "Miscellaneous";
   }
-  .deep-grid {
+  .deep-gridd {
     display: grid;
-    grid-template-rows: 20vh repeat(2, 1fr) !important;
-    grid-template-columns: repeat(8, 1fr) !important;
+    grid-template-rows: 20vh repeat(2, 1frontend) !important;
+    grid-template-columns: repeat(8, 1frontend) !important;
     grid-template-areas:
-      "sk sk sk sk sk sk sk "
-      "fr fr fr fr bc bc bc bc"
-      "cl cl cl web web web misc misc" !important;
+      "skill skill skill skill skill skill skill skill "
+      "frontend frontend frontend frontend backend backend backend backend"
+      "cloud cloud cloud web-scraping web-scraping web-scraping Miscellaneous Miscellaneous" !important;
   }
   /* -----        font -                                     */
   @font-face {

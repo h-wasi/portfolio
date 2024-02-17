@@ -57,7 +57,7 @@ export function Marque() {
 
 export function SkillsMarque() {
   return (
-    <div className="sk col-span-8 row-span-1 border">
+    <div className="skill col-span-8 row-span-1 border">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
       maxime quos eaque iure tenetur ad vel nulla sapiente quidem unde, possimus
       libero iste, nemo molestias dolor qui. Laudantium, eum ad?
