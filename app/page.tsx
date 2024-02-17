@@ -31,7 +31,7 @@ export default function Home() {
     return [controls];
   };
   useInViewAnimation(ref, "-200px", controls1);
-  useInViewAnimation(ref2, "-300px", controls2);
+  useInViewAnimation(ref2, "-250px", controls2);
 
   return (
     <ReactLenis root options={{ duration: 2 }}>
@@ -140,14 +140,14 @@ export default function Home() {
                 </h1>
                 <motion.p
                   ref={ref2}
-                  initial={{ opacity: 0, translateX: 500 }}
+                  initial={{ opacity: 0, translateX: 250 }}
                   animate={controls2}
                   variants={{
                     visible: { opacity: 1, translateX: 0 },
-                    // hidden: { opacity: 0, translateX: 500 },
+                    hidden: { opacity: 0, translateX: 250 },
                   }}
-                  transition={{ duration: 4.6, type: "spring" }}
-                  className="px-4 text-lg max-sm:text-[1rem] md:max-w-[60vw] md:font-bold md:tracking-widest md:leading-10"
+                  transition={{ duration: 2.6, type: "spring" }}
+                  className="px-4 text-lg max-sm:text-[1rem] md:max-w-[60vw] md:font-bold"
                 >
                   Wasi <span className="text-sm font-normal">(HE/HIM)</span> is
                   a seasoned Frontend Engineer with a knack for crafting

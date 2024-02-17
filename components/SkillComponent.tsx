@@ -4,7 +4,7 @@ import { SkillsMarque } from "./Marque";
 function SkillComponent() {
   return (
     <div //
-      className="xl:deep-gridd deep-gridm bg-gray-600 bg-grid grid-skills gap-4 h-[100vh] max-xl:h-[205vh] py-4 px-6 transition-all duration-1000"
+      className="xl:deep-gridd deep-gridm bg-gray-600 grid-skills gap-4 h-[100vh] max-xl:h-[205vh] py-4 px-6 duration-1000"
       id="skills"
     >
       <SkillsMarque />
