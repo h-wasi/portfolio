@@ -51,7 +51,7 @@ function Nav({
   setIsOpen: (value: string) => void;
 }) {
   return (
-    <div className="flex justify-between px-8 relative top-5 left-[2.5%] md:bg-white py-3 w-[95%] md:shadow-xl rounded-xl border-1">
+    <div className="flex justify-between px-8 relative top-5 left-[2.5%] md:bg-white py-1.5 w-[95%] md:shadow-xl rounded-xl border-1">
       <div className="flex gap-3 items-center">
         <Link href={"/"}>
           <Image
@@ -62,7 +62,7 @@ function Nav({
             alt="logo"
           ></Image>
         </Link>
-        <p className="text-[14px] max-md:text-center">{info}</p>
+        <p className="text-[12px] font-semibold max-md:text-center">{info}</p>
       </div>
       <div
         className="flex gap-2 items-center border rounded-xl px-2 shadow-md hover:shadow-sm max-md:hidden cursor-pointer"
