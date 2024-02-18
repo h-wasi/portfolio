@@ -147,10 +147,10 @@ export default function Home() {
                     hidden: { opacity: 0, translateX: 200 },
                   }}
                   transition={{ duration: 2.6, type: "spring" }}
-                  className="px-4 text-lg max-sm:text-[1rem] xl:leading-10 xl:tracking-widest md:max-w-[60vw] md:font-bold"
+                  className="px-4 text-3xl max-sm:text-lg md:leading-10 md:tracking-widest md:max-w-[60vw] font-medium"
                 >
                   {name}
-                  <span className="text-sm font-normal">{pronouns}</span>
+                  <span className="text-xl font-thin">{pronouns}</span>
                   {overview}
                 </motion.p>
               </div>

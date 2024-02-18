@@ -21,7 +21,7 @@ export const info =
 export const name = "Wasi ";
 export const pronouns = "(He/Him)";
 export const overview =
-  " is a seasoned Frontend Engineer with a knack for crafting captivating user interfaces that elevate user experiences. Specializing in React and Next.js, he excels in turning complex ideas into engaging, interactive web solutions. With a background in Docker, AWS, and Kubernetes, Wasi is adept at deploying robust and scalable frontend architectures. Operating globally, he`s always on the move, bringing his unique blend of technical acumen and creativity to every project he touches.";
+  " a seasoned Fullstack Engineer, excels in diverse tech stacks and containerization. His expertise enables him to create robust, scalable systems and his proficiency in cloud technologies leads to unparalleled digital solutions. His tech prowess and creativity ignite innovation. Curious about his skillset?";
 
 const skillIcons = [
   {
