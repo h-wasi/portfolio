@@ -1,4 +1,3 @@
-import React, { Children } from "react";
 import { SkillsMarque } from "./Marque";
 import { bskill, cskill, fskill, mskill, wskill } from "@/constant";
 
@@ -127,7 +126,7 @@ function Card({
 
 function Badge({ Children }: { Children: string }) {
   return (
-    <h1 className="absolute inset-4 text-lg tracking-[.18rem] text-white left-10">
+    <h1 className="absolute top-4 text-lg tracking-[.18rem] text-white left-10">
       {Children}
     </h1>
   );
