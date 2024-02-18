@@ -13,11 +13,11 @@ import Image from "next/image";
 
 function SkillComponent() {
   return (
-    <div //
+    <div 
       className="xl:deep-gridd deep-gridm grid-skills gap-4 h-[120vh] max-xl:h-[270vh] py-4 px-6 duration-1000 bg-gradient-to-bl from-violet-800 from-10% via-indigo-900 via-40% to-violet-700 to-95% relative overflow-hidden text-white"
       id="skills"
     >
-      <div className="absolute bg-black/10 backdrop-blur-xl w-screen xl:h-[120vh] h-[205vh] h bg-grid bg-cover bg-opacity-20"></div>
+      <div className="absolute bg-black/10 backdrop-blur-xl w-screen h-[120vh] max-xl:h-[270vh] h bg-grid bg-cover bg-opacity-20"></div>
       <SkillsMarque />
       <div className="border frontend border-slate-600/10 shadow-lg shadow-black/20 ring-1 ring-black/15 bg-black/20 backdrop-blur-xl  rounded-xl relative z-20 overflow-hidden">
         <div className="relative -left-4 -top-3 flex">
