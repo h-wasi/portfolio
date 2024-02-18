@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { LinkComponent } from "../components/LinkComponent";
-import { links, sections } from "@/constant";
+import { links, name, overview, pronouns, sections } from "@/constant";
 import Time from "@/components/Time";
 import { Marque, SkillsMarque } from "@/components/Marque";
 import { LinkTree } from "@/components/LinkTree";
@@ -147,18 +147,11 @@ export default function Home() {
                     hidden: { opacity: 0, translateX: 200 },
                   }}
                   transition={{ duration: 2.6, type: "spring" }}
-                  className="px-4 text-lg max-sm:text-[1rem] md:max-w-[60vw] md:font-bold"
+                  className="px-4 text-lg max-sm:text-[1rem] xl:leading-10 xl:tracking-widest md:max-w-[60vw] md:font-bold"
                 >
-                  Wasi <span className="text-sm font-normal">(HE/HIM)</span> is
-                  a seasoned Frontend Engineer with a knack for crafting
-                  captivating user interfaces that elevate user experiences.
-                  Specializing in React and Next.js, he excels in turning
-                  complex ideas into engaging, interactive web solutions. With a
-                  background in Docker, AWS, and Kubernetes, Wasi is adept at
-                  deploying robust and scalable frontend architectures.
-                  Operating globally, he`s always on the move, bringing his
-                  unique blend of technical acumen and creativity to every
-                  project he touches.
+                  {name}
+                  <span className="text-sm font-normal">{pronouns}</span>
+                  {overview}
                 </motion.p>
               </div>
               <SkillComponent />

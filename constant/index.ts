@@ -1,6 +1,8 @@
 import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
 import { HoverCardContent } from "@radix-ui/react-hover-card";
 import exp from "constants";
+import { complex } from "framer-motion";
+import React from "react";
 
 export const links = [
   { url: "", name: "LinkedIn" },
@@ -16,6 +18,10 @@ export const sections = [
 ];
 export const info =
   "DIGITAL CRAFTSMAN, CRAFTING INNOVATIVE WEB EXPERIENCES WITH MERN";
+export const name = "Wasi ";
+export const pronouns = "(He/Him)";
+export const overview =
+  " is a seasoned Frontend Engineer with a knack for crafting captivating user interfaces that elevate user experiences. Specializing in React and Next.js, he excels in turning complex ideas into engaging, interactive web solutions. With a background in Docker, AWS, and Kubernetes, Wasi is adept at deploying robust and scalable frontend architectures. Operating globally, he`s always on the move, bringing his unique blend of technical acumen and creativity to every project he touches.";
 
 const skillIcons = [
   {
