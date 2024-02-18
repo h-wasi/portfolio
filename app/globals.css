@@ -70,7 +70,7 @@
   }
   .deep-gridm {
     display: grid;
-    grid-template-rows: 20vh repeat(5, 23vh);
+    grid-template-rows: 20vh repeat(5, 40vh);
     grid-template-areas:
       "skill"
       "frontend"

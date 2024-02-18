@@ -61,6 +61,13 @@ const skillIcons = [
       "ShadcnUI: Build accessible web apps with confidence, offering a robust component library for inclusive design.",
   },
   {
+    url: "/ExpressJS-Dark.svg",
+    name: "Express.js :",
+    width: 50,
+    description:
+      "Express.js: Streamline web application development with a minimalist web framework, offering a fast and unopinionated approach.",
+  },
+  {
     url: "/node.svg",
     name: "Node.js :",
     width: 130,
@@ -73,13 +80,6 @@ const skillIcons = [
     width: 160,
     description:
       "MongoDB: Leverage a flexible NoSQL database for a modern, document-oriented storage solution in your applications.",
-  },
-  {
-    url: "/ExpressJS-Dark.svg",
-    name: "Express.js :",
-    width: 50,
-    description:
-      "Express.js: Streamline web application development with a minimalist web framework, offering a fast and unopinionated approach.",
   },
   {
     url: "/Prisma.svg",
@@ -124,18 +124,18 @@ const skillIcons = [
       "BrightData: Amplify your data collection efforts with a network of residential IPs, enhancing web scraping and data enrichment.",
   },
   {
-    url: "/Auth.svg",
-    name: "NextAuth :",
-    width: 60,
-    description:
-      "NextAuth: Secure your Next.js applications with authentication, supporting a variety of sign-in options and social logins.",
-  },
-  {
     url: "/clerk.avif",
     name: "Clerk :",
     width: 140,
     description:
       "Clerk: Manage users and authentication with ease, providing a secure and scalable solution for modern web applications.",
+  },
+  {
+    url: "/Auth.svg",
+    name: "NextAuth :",
+    width: 60,
+    description:
+      "NextAuth: Secure your Next.js applications with authentication, supporting a variety of sign-in options and social logins.",
   },
   {
     url: "/cron.svg",
