@@ -25,32 +25,11 @@ export const overview =
 
 const skillIcons = [
   {
-    url: "/framer.svg",
-    name: "Framer Motion :",
-    width: 40,
-    description:
-      "Unleash creativity with Framer, a game-changer for interactive web applications, empowering designers to bring their vision to life.",
-  },
-  {
     url: "/NextJS-Dark.svg",
     name: "Next.js :",
     width: 50,
     description:
       "The powerhouse for React, crafting high-performance web applications that delight users and boost SEO.",
-  },
-  {
-    url: "/shadcn.svg",
-    name: "ShadcnUI :",
-    width: 50,
-    description:
-      "Build accessible web apps with confidence, offering a robust component library for inclusive design.",
-  },
-  {
-    url: "/TypeScript.svg",
-    name: "TypeScript :",
-    width: 40,
-    description:
-      "Supercharge JavaScript with static types, enhancing code quality and developer productivity.",
   },
   {
     url: "/JavaScript.svg",
@@ -60,11 +39,32 @@ const skillIcons = [
       "The heart of web development, crafting dynamic, interactive experiences that captivate users.",
   },
   {
+    url: "/TypeScript.svg",
+    name: "TypeScript :",
+    width: 40,
+    description:
+      "Supercharge JavaScript with static types, enhancing code quality and developer productivity.",
+  },
+  {
     url: "/TailwindCSS-Dark.svg",
     name: "Tailwind CSS :",
     width: 50,
     description:
       "Rapidly prototype with utility-first CSS, allowing for custom UI tailored to your brand's aesthetic.",
+  },
+  {
+    url: "/framer.svg",
+    name: "Framer Motion :",
+    width: 40,
+    description:
+      "Unleash creativity with Framer, a game-changer for interactive web applications, empowering designers to bring their vision to life.",
+  },
+  {
+    url: "/shadcn.svg",
+    name: "ShadcnUI :",
+    width: 50,
+    description:
+      "Build accessible web apps with confidence, offering a robust component library for inclusive design.",
   },
   {
     url: "/node.svg",

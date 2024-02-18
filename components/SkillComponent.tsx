@@ -1,8 +1,6 @@
 import { SkillsMarque } from "./Marque";
 import { bskill, cskill, fskill, mskill, wskill } from "@/constant";
-// import { Tooltip } from "@nextui-org/react";
 import { Tooltip } from "@nextui-org/tooltip";
-
 import {
   HoverCard,
   HoverCardContent,
@@ -11,9 +9,11 @@ import {
 
 import Image from "next/image";
 
+
+
 function SkillComponent() {
   return (
-    <div 
+    <div
       className="xl:deep-gridd deep-gridm grid-skills gap-4 h-[120vh] max-xl:h-[270vh] py-4 px-6 duration-1000 bg-gradient-to-bl from-violet-800 from-10% via-indigo-900 via-40% to-violet-700 to-95% relative overflow-hidden text-white"
       id="skills"
     >
@@ -142,7 +142,9 @@ function Card({
 
 function Badge({ Children }: { Children: string }) {
   return (
-    <h1 className="absolute top-4 text-lg tracking-[.18rem] text-white left-10">
+    <h1
+      className={` absolute top-4 text-lg tracking-[.18rem] text-white left-10 font-cursive`}
+    >
       {Children}
     </h1>
   );
