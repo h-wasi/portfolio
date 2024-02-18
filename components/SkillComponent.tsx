@@ -19,7 +19,7 @@ function SkillComponent() {
       <SkillsMarque />
       <div className="border frontend border-slate-600/10 shadow-lg shadow-black/20 ring-1 ring-black/15 bg-black/20 backdrop-blur-xl  rounded-xl relative z-20 overflow-hidden">
         <div className="absolute -right-28 -z-10 blur-[8px] -bottom-11">
-          <Image src={"/frontend.svg"} width={300} height={20} alt=""></Image>
+          <Image src={"/frontend.svg"} width={270} height={20} alt=""></Image>
         </div>
         <div className="relative -left-4 -top-3 flex">
           <div className="h-[3.4rem] w-[10rem] border border-gray-800/30 rounded-xl bg-gradient-to-r from-cyan-700 to-blue-700 skew-x-[-20deg] absolute"></div>
@@ -52,7 +52,7 @@ function SkillComponent() {
       </div>
       <div className="backend border border-slate-600/10 shadow-lg shadow-black/20 ring-1 ring-black/15 bg-black/20 backdrop-blur-xl rounded-xl relative z-20 bg-grid overflow-hidden">
         <div className="absolute -right-28 -z-10 blur-[8px] -bottom-11">
-          <Image src={"/backend.svg"} width={300} height={20} alt=""></Image>
+          <Image src={"/backend.svg"} width={280} height={20} alt=""></Image>
         </div>
         <div className="relative -left-4 -top-3 flex">
           <div className="h-[3.4rem] w-[10rem] border border-gray-800/30 rounded-xl bg-gradient-to-r from-cyan-700 to-blue-700 skew-x-[-20deg] absolute"></div>
@@ -85,7 +85,7 @@ function SkillComponent() {
       </div>
       <div className="cloud border border-slate-600/10 shadow-lg shadow-black/20 ring-1 ring-black/15 bg-black/20 backdrop-blur-xl rounded-xl relative z-10 bg-grid overflow-hidden">
         <div className="absolute -right-12 -z-10 blur-[8px] -bottom-10">
-          <Image src={"/cloud.svg"} width={300} height={20} alt=""></Image>
+          <Image src={"/cloud.svg"} width={230} height={20} alt=""></Image>
         </div>
         <div className="relative -left-4 -top-3 flex">
           <div className="h-[3.4rem] w-[8rem] border border-gray-800/30 rounded-xl bg-gradient-to-r from-cyan-700 to-blue-700 skew-x-[-20deg] absolute"></div>
@@ -118,7 +118,7 @@ function SkillComponent() {
       </div>
       <div className="web-scraping border border-slate-600/10 shadow-lg shadow-black/20 ring-1 ring-black/15 bg-black/20 backdrop-blur-xl rounded-xl relative z-10 overflow-hidden">
         <div className="absolute -right-10 -z-10 blur-[8px] -bottom-16">
-          <Image src={"/data.svg"} width={300} height={20} alt=""></Image>
+          <Image src={"/data.svg"} width={240} height={20} alt=""></Image>
         </div>
         <div className="relative -left-4 -top-3 flex">
           <div className="h-[3.4rem] w-[12.7rem] border border-gray-800/30 rounded-xl bg-gradient-to-r from-cyan-700 to-blue-700 skew-x-[-20deg] absolute"></div>
@@ -150,10 +150,10 @@ function SkillComponent() {
         </div>
       </div>
       <div className="Miscellaneous border border-slate-600/10 shadow-lg shadow-black/20 ring-1 ring-black/15 bg-black/20 backdrop-blur-xl rounded-xl relative z-10 overflow-hidden">
-        <div className="absolute -right-28 -z-10 blur-[8px] -bottom-11">
+        <div className="absolute -right-20 -z-10 blur-[8px] -bottom-11">
           <Image
             src={"/miscellaneous.svg"}
-            width={300}
+            width={230}
             height={20}
             alt=""
           ></Image>
