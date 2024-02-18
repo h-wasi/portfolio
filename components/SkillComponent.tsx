@@ -12,7 +12,7 @@ import Image from "next/image";
 function SkillComponent() {
   return (
     <div
-      className="xl:deep-gridd deep-gridm grid-skills gap-4 h-[120vh] max-xl:h-[270vh] py-4 px-6 duration-1000 bg-gradient-to-bl from-violet-800 from-10% via-indigo-900 via-40% to-violet-700 to-95% relative overflow-hidden text-white"
+      className="xl:deep-gridd deep-gridm grid-skills gap-4 h-[100vh] max-xl:h-[200vh] py-4 px-6 duration-1000 bg-gradient-to-bl from-violet-800 from-10% via-indigo-900 via-40% to-violet-700 to-95% relative overflow-hidden text-white"
       id="skills"
     >
       <div className="absolute bg-black/10 backdrop-blur-xl w-screen h-[120vh] max-xl:h-[270vh] h bg-grid bg-cover bg-opacity-20"></div>
@@ -28,7 +28,24 @@ function SkillComponent() {
         <div className="w-full h-full flex items-center justify-center bg-grid">
           <div className="flex flex-wrap justify-around gap-6 items-center px-3">
             {fskill.map((skill) => {
-              return <Card key={skill.name} skill={skill} />;
+              return (
+                <Tooltip
+                  key={skill.name}
+                  content={skill.description}
+                  className="p-3 bg-black/30 backdrop-blur-lg w-80 border border-black/20 shadow-md rounded-xl text-white"
+                >
+                  <div>
+                    <div>
+                      <Image
+                        src={skill.url}
+                        width={skill.width}
+                        height={20}
+                        alt={skill.name}
+                      ></Image>
+                    </div>
+                  </div>
+                </Tooltip>
+              );
             })}
           </div>
         </div>
@@ -44,7 +61,24 @@ function SkillComponent() {
         <div className="w-full h-full flex items-center justify-center">
           <div className="flex flex-wrap justify-center gap-6 items-center px-3">
             {bskill.map((skill) => {
-              return <Card key={skill.name} skill={skill} />;
+              return (
+                <Tooltip
+                  key={skill.name}
+                  content={skill.description}
+                  className="p-3 bg-black/30 backdrop-blur-lg w-80 border border-black/20 shadow-md rounded-xl text-white"
+                >
+                  <div>
+                    <div>
+                      <Image
+                        src={skill.url}
+                        width={skill.width}
+                        height={20}
+                        alt={skill.name}
+                      ></Image>
+                    </div>
+                  </div>
+                </Tooltip>
+              );
             })}
           </div>
         </div>
@@ -60,7 +94,24 @@ function SkillComponent() {
         <div className="w-full h-full flex items-center justify-center">
           <div className="flex flex-wrap justify-center gap-6 items-center px-3">
             {cskill.map((skill) => {
-              return <Card key={skill.name} skill={skill} />;
+              return (
+                <Tooltip
+                  key={skill.name}
+                  content={skill.description}
+                  className="p-3 bg-black/30 backdrop-blur-lg w-80 border border-black/20 shadow-md rounded-xl text-white"
+                >
+                  <div>
+                    <div>
+                      <Image
+                        src={skill.url}
+                        width={skill.width}
+                        height={20}
+                        alt={skill.name}
+                      ></Image>
+                    </div>
+                  </div>
+                </Tooltip>
+              );
             })}
           </div>
         </div>
@@ -76,7 +127,24 @@ function SkillComponent() {
         <div className="w-full h-full flex items-center justify-center bg-grid">
           <div className="flex flex-wrap justify-center gap-6 items-center px-3">
             {wskill.map((skill) => {
-              return <Card key={skill.name} skill={skill} />;
+              return (
+                <Tooltip
+                  key={skill.name}
+                  content={skill.description}
+                  className="p-3 bg-black/30 backdrop-blur-lg w-80 border border-black/20 shadow-md rounded-xl text-white"
+                >
+                  <div>
+                    <div>
+                      <Image
+                        src={skill.url}
+                        width={skill.width}
+                        height={20}
+                        alt={skill.name}
+                      ></Image>
+                    </div>
+                  </div>
+                </Tooltip>
+              );
             })}
           </div>
         </div>
@@ -101,7 +169,7 @@ function SkillComponent() {
                 <Tooltip
                   key={i}
                   content={skill.description}
-                  className="p-3 bg-black/30 backdrop-blur-lg border border-black/20 shadow-md rounded-xl text-white"
+                  className="p-3 bg-black/30 backdrop-blur-lg w-80 border border-black/20 shadow-md rounded-xl text-white"
                 >
                   <div key={i}>
                     <div>

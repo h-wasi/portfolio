@@ -1,9 +1,3 @@
-import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
-import { HoverCardContent } from "@radix-ui/react-hover-card";
-import exp from "constants";
-import { complex } from "framer-motion";
-import React from "react";
-
 export const links = [
   { url: "", name: "LinkedIn" },
   { url: "https://twitter.com/h-wasi", name: "Twitter" },
@@ -26,59 +20,59 @@ export const overview =
 const skillIcons = [
   {
     url: "/NextJS-Dark.svg",
-    name: "Next.js :",
+    name: "Next.js:",
     width: 50,
     description:
-      "The powerhouse for React, crafting high-performance web applications that delight users and boost SEO.",
+      "Next.js: The powerhouse for React, crafting high-performance web applications that delight users and boost SEO.",
   },
   {
     url: "/JavaScript.svg",
     name: "JavaScript :",
     width: 40,
     description:
-      "The heart of web development, crafting dynamic, interactive experiences that captivate users.",
+      "JavaScript: The heart of web development, crafting dynamic, interactive experiences that captivate users.",
   },
   {
     url: "/TypeScript.svg",
     name: "TypeScript :",
     width: 40,
     description:
-      "Supercharge JavaScript with static types, enhancing code quality and developer productivity.",
+      "TypeScript: Supercharge JavaScript with static types, enhancing code quality and developer productivity.",
   },
   {
     url: "/TailwindCSS-Dark.svg",
     name: "Tailwind CSS :",
     width: 50,
     description:
-      "Rapidly prototype with utility-first CSS, allowing for custom UI tailored to your brand's aesthetic.",
+      "Tailwind CSS: Rapidly prototype with utility-first CSS, allowing for custom UI tailored to your brand's aesthetic.",
   },
   {
     url: "/framer.svg",
     name: "Framer Motion :",
     width: 40,
     description:
-      "Unleash creativity with Framer, a game-changer for interactive web applications, empowering designers to bring their vision to life.",
+      "Framer Motion: Unleash creativity with Framer, a game-changer for interactive web applications, empowering designers to bring their vision to life.",
   },
   {
     url: "/shadcn.svg",
     name: "ShadcnUI :",
     width: 45,
     description:
-      "Build accessible web apps with confidence, offering a robust component library for inclusive design.",
+      "ShadcnUI: Build accessible web apps with confidence, offering a robust component library for inclusive design.",
   },
   {
     url: "/node.svg",
     name: "Node.js :",
-    width: 90,
+    width: 130,
     description:
-      "Elevate JavaScript to the server-side, enabling scalable and efficient backend solutions.",
+      "Node.js: Elevate JavaScript to the server-side, enabling scalable and efficient backend solutions.",
   },
   {
     url: "/mongodb.svg",
     name: "MongoDB :",
-    width: 120,
+    width: 160,
     description:
-      "Empower your applications with a flexible NoSQL database, providing a document-oriented storage solution for modern applications.",
+      "MongoDB: Leverage a flexible NoSQL database for a modern, document-oriented storage solution in your applications.",
   },
   {
     url: "/ExpressJS-Dark.svg",
@@ -92,21 +86,21 @@ const skillIcons = [
     name: "Prisma :",
     width: 45,
     description:
-      "Simplify database workflows with an open-source toolkit, including an ORM and database migrations, for a smooth development process.",
+      "Prisma: Simplify database workflows with an open-source toolkit, including an ORM and database migrations, for a smooth development process.",
   },
   {
     url: "/Docker.svg",
     name: "Docker :",
     width: 50,
     description:
-      "Containerize your applications, ensuring consistency across development, testing, and production environments.",
+      "Docker: Containerize your applications, ensuring consistency across development, testing, and production environments.",
   },
   {
     url: "/Kubernetes.svg",
     name: "Kubernetes :",
     width: 50,
     description:
-      "Orchestrate your containers, automating deployment, scaling, and operations for robust application management.",
+      "Kubernetes: Orchestrate your containers, automating deployment, scaling, and operations for robust application management.",
   },
   {
     url: "/AWS-Dark.svg",
@@ -116,18 +110,18 @@ const skillIcons = [
       "Amazon Web Services: Leverage the cloud for scalable infrastructure, offering a suite of services to grow and innovate.",
   },
   {
-    url: "/bright.svg",
-    name: "BrightData :",
-    width: 110,
-    description:
-      "Amplify your data collection efforts with a network of residential IPs, enhancing web scraping and data enrichment.",
-  },
-  {
     url: "/ppt.svg",
     name: "Pupeteer :",
-    width: 40,
+    width: 45,
     description:
       "Puppeteer: A sneaky headless browser that takes control, capturing the essence of the web with ease!",
+  },
+  {
+    url: "/bright.svg",
+    name: "BrightData :",
+    width: 200,
+    description:
+      "BrightData: Amplify your data collection efforts with a network of residential IPs, enhancing web scraping and data enrichment.",
   },
   {
     url: "/Auth.svg",
@@ -139,7 +133,7 @@ const skillIcons = [
   {
     url: "/clerk.avif",
     name: "Clerk :",
-    width: 110,
+    width: 140,
     description:
       "Clerk: Manage users and authentication with ease, providing a secure and scalable solution for modern web applications.",
   },
