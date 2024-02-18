@@ -62,7 +62,7 @@ const skillIcons = [
   {
     url: "/shadcn.svg",
     name: "ShadcnUI :",
-    width: 50,
+    width: 45,
     description:
       "Build accessible web apps with confidence, offering a robust component library for inclusive design.",
   },
@@ -156,17 +156,3 @@ export const bskill = skillIcons.slice(6, 10);
 export const cskill = skillIcons.slice(10, 13);
 export const wskill = skillIcons.slice(13, 15);
 export const mskill = skillIcons.slice(15);
-
-// <HoverCard>
-//   <HoverCardTrigger asChild>
-//     <Image src={skill.url} width={40} height={20} alt={skill.name}></Image>
-//   </HoverCardTrigger>
-//   <HoverCardContent className="w-80">
-//     <div className="flex justify-between space-x-4">
-//       <div className="space-y-1">
-//         <h4 className="text-sm font-semibold">{skill.name}</h4>
-//         <p className="text-md"> {skill.description}</p>
-//       </div>
-//     </div>
-//   </HoverCardContent>
-// </HoverCard>;
