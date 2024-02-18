@@ -12,7 +12,7 @@ import Image from "next/image";
 function SkillComponent() {
   return (
     <div //
-      className="xl:deep-gridd deep-gridm grid-skills gap-4 h-[120vh] max-xl:h-[205vh] py-4 px-6 duration-1000 bg-gradient-to-bl from-violet-800 from-10% via-indigo-900 via-40% to-violet-900 to-95% relative overflow-hidden text-white"
+      className="xl:deep-gridd deep-gridm grid-skills gap-4 h-[120vh] max-xl:h-[205vh] py-4 px-6 duration-1000 bg-gradient-to-bl from-violet-800 from-10% via-indigo-900 via-40% to-violet-700 to-95% relative overflow-hidden text-white"
       id="skills"
     >
       <div className="absolute bg-black/10 backdrop-blur-xl w-screen xl:h-[120vh] h-[205vh] h bg-grid bg-cover bg-opacity-20"></div>
