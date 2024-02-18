@@ -7,7 +7,7 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 import { LinkComponent } from "../components/LinkComponent";
 import { links, name, overview, pronouns, sections } from "@/constant";
 import Time from "@/components/Time";
-import { Marque, SkillsMarque } from "@/components/Marque";
+import { Marque } from "@/components/Marque";
 import { LinkTree } from "@/components/LinkTree";
 import SkillComponent from "@/components/SkillComponent";
 

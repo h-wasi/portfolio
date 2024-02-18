@@ -1,11 +1,14 @@
 import { SkillsMarque } from "./Marque";
 import { bskill, cskill, fskill, mskill, wskill } from "@/constant";
+// import { Tooltip } from "@nextui-org/react";
+import { Tooltip } from "@nextui-org/tooltip";
 
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+
 import Image from "next/image";
 
 function SkillComponent() {
@@ -35,7 +38,7 @@ function SkillComponent() {
           <Badge Children={"BackEnd"} />
         </div>
         <div className="w-full h-full flex items-center justify-center">
-          <div className="flex flex-wrap justify-center gap-6 items-center">
+          <div className="flex flex-wrap justify-center gap-6 items-center px-3">
             {bskill.map((skill) => {
               return <Card key={skill.name} skill={skill} />;
             })}
@@ -48,7 +51,7 @@ function SkillComponent() {
           <Badge Children={"Cloud"} />
         </div>
         <div className="w-full h-full flex items-center justify-center">
-          <div className="flex flex-wrap justify-center gap-6 items-center">
+          <div className="flex flex-wrap justify-center gap-6 items-center px-3">
             {cskill.map((skill) => {
               return <Card key={skill.name} skill={skill} />;
             })}
@@ -61,7 +64,7 @@ function SkillComponent() {
           <Badge Children={"Web Scraping"} />
         </div>
         <div className="w-full h-full flex items-center justify-center bg-grid">
-          <div className="flex flex-wrap justify-center gap-6 items-center">
+          <div className="flex flex-wrap justify-center gap-6 items-center px-3">
             {wskill.map((skill) => {
               return <Card key={skill.name} skill={skill} />;
             })}
@@ -74,12 +77,25 @@ function SkillComponent() {
           <Badge Children={"Miscellaneous"} />
         </div>
         <div className="w-full h-full flex items-center justify-center bg-grid">
-          <div className="flex flex-wrap justify-center gap-6 items-center">
+          <div className="flex flex-wrap justify-center gap-6 items-center px-3">
             {mskill.map((skill, i) => {
               return (
-                <div key={i}>
-                  <Card key={skill.name} skill={skill} />
-                </div>
+                <Tooltip
+                  key={i}
+                  content={skill.description}
+                  className="p-3 bg-black/30 backdrop-blur-lg border border-black/20 shadow-md rounded-xl text-white"
+                >
+                  <div key={i}>
+                    <div>
+                      <Image
+                        src={skill.url}
+                        width={skill.width}
+                        height={20}
+                        alt={skill.name}
+                      ></Image>
+                    </div>
+                  </div>
+                </Tooltip>
               );
             })}
           </div>

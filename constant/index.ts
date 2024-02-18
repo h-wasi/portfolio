@@ -134,21 +134,21 @@ const skillIcons = [
     name: "NextAuth :",
     width: 60,
     description:
-      "Secure your Next.js applications with authentication, supporting a variety of sign-in options and social logins.",
+      "NextAuth: Secure your Next.js applications with authentication, supporting a variety of sign-in options and social logins.",
   },
   {
     url: "/clerk.avif",
     name: "Clerk :",
     width: 110,
     description:
-      "Manage users and authentication with ease, providing a secure and scalable solution for modern web applications.",
+      "Clerk: Manage users and authentication with ease, providing a secure and scalable solution for modern web applications.",
   },
   {
     url: "/cron.svg",
     name: "CronJobs :",
     width: 70,
     description:
-      "Schedule tasks efficiently, ensuring regular data updates, backups, and reports run on time.",
+      "CronJobs: Schedule tasks efficiently, ensuring regular data updates, backups, and reports run on time.",
   },
 ];
 export const fskill = skillIcons.slice(0, 6);
