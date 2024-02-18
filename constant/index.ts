@@ -1,3 +1,5 @@
+import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
+import { HoverCardContent } from "@radix-ui/react-hover-card";
 import exp from "constants";
 
 export const links = [
@@ -15,107 +17,150 @@ export const sections = [
 export const info =
   "DIGITAL CRAFTSMAN, CRAFTING INNOVATIVE WEB EXPERIENCES WITH MERN";
 
-export const skillIcons = [
+const skillIcons = [
   {
-    url: "/file.svg",
-    name: "Framer",
+    url: "/framer.svg",
+    name: "Framer Motion :",
+    width: 40,
     description:
       "Unleash creativity with Framer, a game-changer for interactive web applications, empowering designers to bring their vision to life.",
   },
   {
-    url: "/file.svg",
-    name: "Next.js",
+    url: "/NextJS-Dark.svg",
+    name: "Next.js :",
+    width: 50,
     description:
-      "Next.js: The powerhouse for React, crafting high-performance web applications that delight users and boost SEO.",
+      "The powerhouse for React, crafting high-performance web applications that delight users and boost SEO.",
   },
   {
-    url: "/file.svg",
-    name: "RadixUI",
+    url: "/shadcn.svg",
+    name: "ShadcnUI :",
+    width: 50,
     description:
-      "RadixUI: Build accessible web apps with confidence, offering a robust component library for inclusive design.",
+      "Build accessible web apps with confidence, offering a robust component library for inclusive design.",
   },
   {
-    url: "/file.svg",
-    name: "TypeScript",
+    url: "/TypeScript.svg",
+    name: "TypeScript :",
+    width: 40,
     description:
-      "TypeScript: Supercharge JavaScript with static types, enhancing code quality and developer productivity.",
+      "Supercharge JavaScript with static types, enhancing code quality and developer productivity.",
   },
   {
-    url: "/file.svg",
-    name: "JavaScript",
+    url: "/JavaScript.svg",
+    name: "JavaScript :",
+    width: 40,
     description:
-      "JavaScript: The heart of web development, crafting dynamic, interactive experiences that captivate users.",
+      "The heart of web development, crafting dynamic, interactive experiences that captivate users.",
   },
   {
-    url: "/file.svg",
-    name: "Tailwind CSS",
+    url: "/TailwindCSS-Dark.svg",
+    name: "Tailwind CSS :",
+    width: 50,
     description:
-      "Tailwind CSS: Rapidly prototype with utility-first CSS, allowing for custom UI tailored to your brand's aesthetic.",
+      "Rapidly prototype with utility-first CSS, allowing for custom UI tailored to your brand's aesthetic.",
   },
   {
-    url: "/file.svg",
-    name: "Node.js",
+    url: "/node.svg",
+    name: "Node.js :",
+    width: 90,
     description:
-      "Node.js: Elevate JavaScript to the server-side, enabling scalable and efficient backend solutions.",
+      "Elevate JavaScript to the server-side, enabling scalable and efficient backend solutions.",
   },
   {
-    url: "/file.svg",
-    name: "MongoDB",
+    url: "/mongodb.svg",
+    name: "MongoDB :",
+    width: 120,
     description:
-      "MongoDB: Empower your applications with a flexible NoSQL database, providing a document-oriented storage solution for modern applications.",
+      "Empower your applications with a flexible NoSQL database, providing a document-oriented storage solution for modern applications.",
   },
   {
-    url: "/file.svg",
-    name: "Express.js",
+    url: "/ExpressJS-Dark.svg",
+    name: "Express.js :",
+    width: 50,
     description:
       "Express.js: Streamline web application development with a minimalist web framework, offering a fast and unopinionated approach.",
   },
   {
-    url: "/file.svg",
-    name: "Prisma",
+    url: "/Prisma.svg",
+    name: "Prisma :",
+    width: 45,
     description:
-      "Prisma: Simplify database workflows with an open-source toolkit, including an ORM and database migrations, for a smooth development process.",
+      "Simplify database workflows with an open-source toolkit, including an ORM and database migrations, for a smooth development process.",
   },
   {
-    url: "/file.svg",
-    name: "Docker",
+    url: "/Docker.svg",
+    name: "Docker :",
+    width: 50,
     description:
-      "Docker: Containerize your applications, ensuring consistency across development, testing, and production environments.",
+      "Containerize your applications, ensuring consistency across development, testing, and production environments.",
   },
   {
-    url: "/file.svg",
-    name: "Kubernetes",
+    url: "/Kubernetes.svg",
+    name: "Kubernetes :",
+    width: 50,
     description:
-      "Kubernetes: Orchestrate your containers, automating deployment, scaling, and operations for robust application management.",
+      "Orchestrate your containers, automating deployment, scaling, and operations for robust application management.",
   },
   {
-    url: "/file.svg",
-    name: "AWS",
+    url: "/AWS-Dark.svg",
+    name: "AWS :",
+    width: 55,
     description:
       "Amazon Web Services: Leverage the cloud for scalable infrastructure, offering a suite of services to grow and innovate.",
   },
   {
-    url: "/file.svg",
-    name: "BrightData",
+    url: "/bright.svg",
+    name: "BrightData :",
+    width: 110,
     description:
-      "BrightData: Amplify your data collection efforts with a network of residential IPs, enhancing web scraping and data enrichment.",
+      "Amplify your data collection efforts with a network of residential IPs, enhancing web scraping and data enrichment.",
   },
   {
-    url: "/file.svg",
-    name: "NextAuth",
+    url: "/ppt.svg",
+    name: "Pupeteer :",
+    width: 40,
     description:
-      "NextAuth.js: Secure your Next.js applications with authentication, supporting a variety of sign-in options and social logins.",
+      "Puppeteer: A sneaky headless browser that takes control, capturing the essence of the web with ease!",
   },
   {
-    url: "/file.svg",
-    name: "Clerk",
+    url: "/Auth.svg",
+    name: "NextAuth :",
+    width: 60,
     description:
-      "Clerk: Manage users and authentication with ease, providing a secure and scalable solution for modern web applications.",
+      "Secure your Next.js applications with authentication, supporting a variety of sign-in options and social logins.",
   },
   {
-    url: "/file.svg",
-    name: "CronJobs",
+    url: "/clerk.avif",
+    name: "Clerk :",
+    width: 110,
     description:
-      "CronJobs: Schedule tasks efficiently, ensuring regular data updates, backups, and reports run on time.",
+      "Manage users and authentication with ease, providing a secure and scalable solution for modern web applications.",
+  },
+  {
+    url: "/cron.svg",
+    name: "CronJobs :",
+    width: 70,
+    description:
+      "Schedule tasks efficiently, ensuring regular data updates, backups, and reports run on time.",
   },
 ];
+export const fskill = skillIcons.slice(0, 6);
+export const bskill = skillIcons.slice(6, 10);
+export const cskill = skillIcons.slice(10, 13);
+export const wskill = skillIcons.slice(13, 15);
+export const mskill = skillIcons.slice(15);
+
+// <HoverCard>
+//   <HoverCardTrigger asChild>
+//     <Image src={skill.url} width={40} height={20} alt={skill.name}></Image>
+//   </HoverCardTrigger>
+//   <HoverCardContent className="w-80">
+//     <div className="flex justify-between space-x-4">
+//       <div className="space-y-1">
+//         <h4 className="text-sm font-semibold">{skill.name}</h4>
+//         <p className="text-md"> {skill.description}</p>
+//       </div>
+//     </div>
+//   </HoverCardContent>
+// </HoverCard>;

@@ -57,7 +57,7 @@ export function Marque() {
 
 export function SkillsMarque() {
   return (
-    <div className="skill rounded-xl bg-black">
+    <div className="skill rounded-xl bg-black relative z-10">
       <motion.div
         initial={{ translateX: 0, opacity: 0 }}
         animate={{ translateX: -5200, opacity: 1 }}
