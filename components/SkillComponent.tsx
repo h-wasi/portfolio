@@ -30,7 +30,7 @@ function SkillComponent() {
           </div>
         </div>
       </div>
-      <div className="backend overflow-hidden border border-slate-600/10 shadow-lg shadow-black/20 ring-1 ring-black/15 bg-black/20 backdrop-blur-xl rounded-xl relative z-20 bg-grid overflow-hidden">
+      <div className="backend border border-slate-600/10 shadow-lg shadow-black/20 ring-1 ring-black/15 bg-black/20 backdrop-blur-xl rounded-xl relative z-20 bg-grid overflow-hidden">
         <div className="relative -left-4 -top-3 flex">
           <div className="h-[3.4rem] w-[10rem] border border-gray-800/30 rounded-xl bg-gradient-to-r from-cyan-700 to-blue-700 skew-x-[-20deg] absolute"></div>
           <Badge Children={"BackEnd"} />
