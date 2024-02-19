@@ -6,8 +6,8 @@ export const links = [
 ];
 export const sections = [
   { url: "#about", name: "About" },
-  { url: "#skills", name: "Skills" },
   { url: "#projects", name: "Projects" },
+  { url: "#skills", name: "Skills" },
   { url: "#contact", name: "Contact" },
 ];
 export const info =

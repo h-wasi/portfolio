@@ -7,7 +7,7 @@ import Image from "next/image";
 function SkillComponent() {
   return (
     <div
-      className="lg:deep-gridd deep-gridm grid-skills gap-4 h-[100vh] max-lg:h-[236vh] py-4 px-6 duration-1000 bg-gradient-to-bl from-violet-800 from-10% via-indigo-900 via-40% to-violet-700 to-95% relative overflow-hidden text-white"
+      className="lg:deep-gridd deep-gridm grid-skills gap-4 h-[100vh] max-lg:h-[236vh] py-4 px-6 duration-1000 bg-gradient-to-bl from-violet-800 from-10% via-indigo-900 via-40% to-violet-700 to-95% relative overflow-hidden text-white max-3xl:border-b max-3xl:shadow-xl max-3xl:shadow-indigo-700/70 max-3xl:border-slate-500/80 max-3xl:rounded-b-2xl"
       id="skills"
     >
       <div className="absolute bg-black/10 backdrop-blur-xl w-screen h-[120vh] max-xl:h-[270vh] h bg-grid bg-cover bg-opacity-20"></div>

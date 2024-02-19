@@ -11,6 +11,7 @@ import { Marque } from "@/components/Marque";
 import { LinkTree } from "@/components/LinkTree";
 import SkillComponent from "@/components/SkillComponent";
 import Projects from "@/components/Projects";
+import Catch from "@/components/Catch";
 
 export default function Home() {
   //in View animation
@@ -52,10 +53,9 @@ export default function Home() {
               alt="hero"
             ></Image>
             <div className="justify-between gap-3 items-center absolute max-sm:hidden max-md:bottom-36 bottom-7 left-5 flex">
-              <div className="border px-3 py-1 border-black rounded-xl flex justify-center">
+              <div className="border px-3 py-2 border-black rounded-xl flex justify-center">
                 <motion.p
                   animate={{
-                    scaleX: 1.7,
                     translateY: [-16, 0, 0, 6],
                     opacity: [0, 1, 1, 1, 0],
                   }}
@@ -68,7 +68,13 @@ export default function Home() {
                     repeatType: "loop",
                   }}
                 >
-                  &darr;
+                  <Image
+                    draggable="false"
+                    src={"/arrowdown.svg"}
+                    width={20}
+                    height={60}
+                    alt="logo"
+                  ></Image>
                 </motion.p>
               </div>
               <span className="text-md">Scroll down</span>
@@ -156,10 +162,8 @@ export default function Home() {
                 </motion.p>
               </div>
               <SkillComponent />
+              <Catch />
               <Projects />
-              <div className="bg-orange-300 grid-catch" id="catchme">
-                Catch Me
-              </div>
             </div>
           </div>
           <section

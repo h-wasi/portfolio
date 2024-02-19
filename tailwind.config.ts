@@ -29,6 +29,7 @@ const config: Config = {
     extend: {
       screens: {
         "2xl": "460px", // define new screen
+        "3xl": "750px",
       },
       backgroundImage: {
         grid: "url('/grid.svg')",

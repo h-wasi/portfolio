@@ -28,7 +28,7 @@
   /* -----        middle grid -                                     */
   .middle-grid {
     display: grid;
-    grid-template-rows: 80vh auto repeat(2, minmax(100vh, auto));
+    grid-template-rows: 80vh auto minmax(100vh, auto) 140vh;
     grid-template-areas:
       "about"
       "skills"
@@ -109,5 +109,15 @@
     font-weight: 600;
     font-style: normal;
     font-display: swap;
+  }
+  @media screen and (max-width: 750px) {
+    .middle-grid {
+      display: grid;
+      grid-template-rows: 80vh minmax(100vh, auto) auto;
+      grid-template-areas:
+        "about"
+        "projects"
+        "skills";
+    }
   }
 }

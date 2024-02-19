@@ -59,16 +59,13 @@ export function SkillsMarque() {
   return (
     <div className="skill rounded-xl bg-black relative z-10">
       <motion.div
-        initial={{ translateX: 0, opacity: 0 }}
-        animate={{ translateX: -5200, opacity: 1 }}
+        initial={{ translateX: 0 }}
+        animate={{ translateX: -6000, opacity: 1 }}
         transition={{
-          duration: 11,
+          duration: 23,
           repeat: Infinity,
           repeatType: "loop",
-          type: "tween",
-          opacity: {
-            duration: 1,
-          },
+          repeatDelay: -8,
         }}
         className="h-full flex text-white gap-8 text-[6.4rem] select-none items-center justify-between"
       >
