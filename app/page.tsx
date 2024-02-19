@@ -10,6 +10,7 @@ import Time from "@/components/Time";
 import { Marque } from "@/components/Marque";
 import { LinkTree } from "@/components/LinkTree";
 import SkillComponent from "@/components/SkillComponent";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   //in View animation
@@ -120,7 +121,7 @@ export default function Home() {
             <div className="middle-grid">
               <div
                 id="about"
-                className="px-10 overflow-hidden h-full rounded-t-xl items-center justify-center py-6 flex flex-wrap bg-black gap-10 text-white w-full"
+                className="px-6 overflow-hidden h-full rounded-t-xl items-center justify-center py-4 flex flex-wrap bg-black gap-6 text-white w-full"
               >
                 <h1 className="max-lg:text-5xl lg:text-7xl sticky font-bold flex">
                   {"About".split("").map((el, i) => (
@@ -147,7 +148,7 @@ export default function Home() {
                     hidden: { opacity: 0, translateX: 200 },
                   }}
                   transition={{ duration: 2.6, type: "spring" }}
-                  className="px-4 text-3xl max-sm:text-lg md:leading-10 md:tracking-widest md:max-w-[60vw] font-medium"
+                  className="px-4 text-3xl max-sm:text-xl md:leading-10 md:tracking-widest md:max-w-[60vw] font-medium"
                 >
                   {name}
                   <span className="text-xl font-thin">{pronouns}</span>
@@ -155,9 +156,7 @@ export default function Home() {
                 </motion.p>
               </div>
               <SkillComponent />
-              <div className="bg-purple-600 grid-projects" id="projects">
-                Projects
-              </div>
+              <Projects />
               <div className="bg-orange-300 grid-catch" id="catchme">
                 Catch Me
               </div>

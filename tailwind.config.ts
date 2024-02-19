@@ -10,17 +10,26 @@ const config: Config = {
   ],
   prefix: "",
   theme: {
-    fontFamily: { sans: ["Segoe UI"] },
+    fontFamily: { sans: ["Segoe UI", "Segoe UI Semibold", "Segoe UI Bold"] },
+    fontWeight: {
+      light: "300",
+      normal: "400",
+      medium: "500",
+      semibold: "600",
+      bold: "700",
+    },
     container: {
       center: true,
       padding: "2rem",
       screens: {
         lg: "1100px",
         md: "700px",
-        xl: "1270px",
       },
     },
     extend: {
+      screens: {
+        "2xl": "460px", // define new screen
+      },
       backgroundImage: {
         grid: "url('/grid.svg')",
       },

@@ -6,13 +6,13 @@ export function Marque() {
   return (
     <motion.div
       initial={{ translateX: 1000, scale: 2.2 }}
-      animate={{ translateX: -10000 }}
+      animate={{ translateX: -10500 }}
       transition={{
-        duration: 17,
+        duration: 20,
         repeat: Infinity,
         repeatDelay: -7,
         repeatType: "loop",
-        type: "linear",
+        // type: "linear",
       }}
       className="flex gap-24 w-full select-none"
     >

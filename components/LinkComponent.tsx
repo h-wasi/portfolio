@@ -24,9 +24,9 @@ export function LinkComponent({
     >
       <div className="relative z-10 overflow-hidden">
         <motion.span
-          initial={false}
+          initial={{ translateY: 5 }}
           animate={isHover}
-          variants={{ true: { height: childStyles } }}
+          variants={{ true: { height: childStyles, translateY: 0, } }}
           // transition={}
           className={`absolute top-0 bg-black w-full ${childStyles} -z-10 rounded-xl`}
         ></motion.span>
