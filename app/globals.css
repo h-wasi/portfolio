@@ -110,7 +110,7 @@
     font-style: normal;
     font-display: swap;
   }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 768px) {
     .middle-grid {
       display: grid;
       grid-template-rows: 80vh minmax(100vh, auto) auto;

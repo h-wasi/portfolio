@@ -121,7 +121,7 @@ export default function Home() {
         </motion.div>
         <div className="section-grid relative">
           <div
-            className="grid-static bg-white  max-md:text-center flex flex-col  relative z-10  "
+            className="grid-static bg-slate-300/20  max-md:text-center flex flex-col  relative z-10  "
             ref={ref}
           >
             <div className="middle-grid">
