@@ -28,7 +28,7 @@ export function LinkTree() {
             link={link}
             key={link.name}
             containerStyles="lg:w-[13.4rem] max-lg:w-40 w-60"
-            childStyles="3.7rem"
+            childStyles="3.58rem"
           />
         ))}
         <Button
@@ -51,7 +51,7 @@ function Nav({
   setIsOpen: (value: string) => void;
 }) {
   return (
-    <div className="flex justify-between px-8 relative top-5 left-[2.5%] md:bg-white py-1.5 w-[95%] md:shadow-xl rounded-xl border-1">
+    <div className="flex justify-between px-4 relative top-3 left-[2.5%] sm:bg-white py-2 w-[95%] md:shadow-xl rounded-xl border-1">
       <div className="flex gap-3 items-center">
         <Link href={"/"}>
           <Image
@@ -60,12 +60,13 @@ function Nav({
             width={50}
             height={60}
             alt="logo"
+            className="max-md:hidden"
           ></Image>
         </Link>
         <p className="text-[12px] font-semibold max-md:text-center">{info}</p>
       </div>
       <div
-        className="flex gap-2 items-center border rounded-xl px-2 shadow-md hover:shadow-sm max-md:hidden cursor-pointer"
+        className="flex border rounded-xl items-center px-2 max-sm:hidden cursor-pointer"
         onClick={() => setIsOpen("true")}
       >
         <Image
@@ -75,7 +76,7 @@ function Nav({
           height={20}
           alt="logo"
         ></Image>
-        <Button className="text-sm">Link Tree</Button>
+        <Button className="text-[14px] font-semibold">Link Tree</Button>
       </div>
     </div>
   );

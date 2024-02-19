@@ -4,14 +4,13 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { ReactLenis } from "@studio-freight/react-lenis";
-import { LinkComponent } from "../components/LinkComponent";
 import { links, name, overview, pronouns, sections } from "@/constant";
-import Time from "@/components/Time";
 import { Marque } from "@/components/Marque";
 import { LinkTree } from "@/components/LinkTree";
 import SkillComponent from "@/components/SkillComponent";
 import Projects from "@/components/Projects";
 import Catch from "@/components/Catch";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   //in View animation
@@ -53,14 +52,14 @@ export default function Home() {
               alt="hero"
             ></Image>
             <div className="justify-between gap-3 items-center absolute max-sm:hidden max-md:bottom-36 bottom-7 left-5 flex">
-              <div className="border px-3 py-2 border-black rounded-xl flex justify-center">
+              <div className="border px-[.6rem] py-2 border-black rounded-xl flex justify-center">
                 <motion.p
                   animate={{
                     translateY: [-16, 0, 0, 6],
                     opacity: [0, 1, 1, 1, 0],
                   }}
                   transition={{
-                    duration: 1.6,
+                    duration: 1.8,
                     type: "tween",
                     ease: "linear",
                     repeat: Infinity,
@@ -71,7 +70,7 @@ export default function Home() {
                   <Image
                     draggable="false"
                     src={"/arrowdown.svg"}
-                    width={20}
+                    width={16}
                     height={60}
                     alt="logo"
                   ></Image>
@@ -96,7 +95,7 @@ export default function Home() {
           className="fixed w-screen z-30 bottom-5 flex justify-center max-md:hidden"
         >
           <div className="flex justify-center items-center w-screen">
-            <div className="backdrop-blur-2xl flex items-center justify-between w-[23rem] px-4 gap-8 border border-gray-800/70 rounded-xl py-2 bg-black/50">
+            <div className="backdrop-blur-2xl flex items-center justify-between w-[23rem] px-4 gap-8 border border-gray-400/20 rounded-xl py-[9px] bg-black/50">
               <Link href={"/"}>
                 <Image
                   draggable="false"
@@ -170,57 +169,7 @@ export default function Home() {
             ref={ref}
             className="bg-slate-50 grid-footer sticky bottom-0 flex justify-center items-center px-6"
           >
-            <div className="flex flex-col gap-16">
-              <span className="inline-block py-8 px-4 border-2 border-black rounded-xl select-none">
-                <Image
-                  draggable="false"
-                  src={"/banner.svg"}
-                  width={1300}
-                  height={400}
-                  alt="name"
-                ></Image>
-              </span>
-              <div className="flex flex-wrap text-2xl justify-between items-baseline gap-4">
-                <div className="flex flex-col gap-8 font-semibold flex-wrap max-xl:w-full justify-center">
-                  <div className="flex justify-center items-center flex-wrap">
-                    Made with love and{" "}
-                    <div className="mx-4 flex gap-6 select-none">
-                      <Image
-                        draggable="false"
-                        src={"/next.svg"}
-                        width={100}
-                        height={40}
-                        alt="next"
-                      ></Image>
-                      +
-                      <Image
-                        draggable="false"
-                        src={"/framer.svg"}
-                        width={30}
-                        height={40}
-                        alt="framer"
-                      ></Image>
-                    </div>{" "}
-                    in Lahore, Pakistan.
-                  </div>
-                  <div className="font-bold flex max-xl:justify-center gap-3 max-sm:text-2xl sm:text-5xl">
-                    <span className="text-gray-500/80">Local time</span>
-                    <span className="text-gray-500/80">-</span>
-                    <Time />
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4 w-[36vw] max-xl:w-full relative">
-                  {links.map((link) => (
-                    <LinkComponent
-                      link={link}
-                      key={link.name}
-                      containerStyles=""
-                      childStyles="4.2rem"
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
+            <Contact />
           </section>
         </div>
       </main>

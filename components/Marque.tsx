@@ -5,10 +5,10 @@ import Image from "next/image";
 export function Marque() {
   return (
     <motion.div
-      initial={{ translateX: 1000, scale: 2.2 }}
+      initial={{ translateX: 1000, scale: 2 }}
       animate={{ translateX: -10500 }}
       transition={{
-        duration: 20,
+        duration: 50,
         repeat: Infinity,
         repeatDelay: -7,
         repeatType: "loop",

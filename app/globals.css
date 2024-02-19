@@ -105,7 +105,7 @@
   }
   @font-face {
     font-family: "Segoe UI Semibold";
-    src: url("/fonts/Segoe UI Bold.ttf") format("truetype");
+    src: url("/fonts/Segoe UI Semibold 600.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;

@@ -4,6 +4,7 @@ export const links = [
   { url: "https://github.com/h-wasi", name: "Github" },
   { url: "https://discord.com/users/1157004264837754890", name: "Discord" },
 ];
+export const email = "h-wasi@gmail.com";
 export const sections = [
   { url: "#about", name: "About" },
   { url: "#projects", name: "Projects" },
