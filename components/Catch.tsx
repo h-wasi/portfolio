@@ -29,10 +29,12 @@ function Catch() {
     }
     return {
       default: {
-        x: mouseXPosition > 0 ? mouseXPosition - 200 : mouseXPosition + 900,
-        y: mouseYPosition > 0 ? mouseYPosition - 100 : mouseYPosition + 300,
+        x: mouseXPosition > 0 ? mouseXPosition - 230 : mouseXPosition + 500,
+        y: mouseYPosition > 0 ? mouseYPosition - 10 : mouseYPosition + 300,
         transition: {
-          duration: 2.5,
+          duration: 1.3,
+          spring: true,
+          mass: 2,
         },
       },
     };
@@ -72,8 +74,8 @@ function Catch() {
             Catch Me
           </h1>
           <Link
-            onDrag={() => redirect(`mailto:${email}`)}
             onClick={() => redirect(`mailto:${email}`)}
+            onDrag={() => redirect(`mailto:${email}`)}
             href={`mailto:${email}`}
             className="text-white text-3xl font-bold w-60 text-center h-16 bg-black border hidden data-[state=open]:flex data-[state=open]:justify-center data-[state=open]:items-center border-gray-700 rounded-xl"
             data-state={isOpen ? "open" : "closed"}
