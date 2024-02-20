@@ -30,7 +30,7 @@ function Catch() {
     return {
       default: {
         x: mouseXPosition > 0 ? mouseXPosition - 230 : mouseXPosition + 500,
-        y: mouseYPosition > 0 ? mouseYPosition - 10 : mouseYPosition + 300,
+        y: mouseYPosition > 0 ? mouseYPosition - 100 : mouseYPosition + 300,
         transition: {
           duration: 1.3,
           spring: true,
@@ -47,11 +47,9 @@ function Catch() {
     <div
       className="bg-slate-50 bg-cover border-b shadow-lg shadow-gray-700/20 border-slate-500/80 rounded-b-2xl grid-catch flex items-center justify-center max-md:hidden"
       id="catchme"
+      ref={ref2}
     >
-      <div
-        className="h-screen rounded-xl border border-transparent bg-white bg-grid invert w-[94vw] flex items-center justify-end px-16 absolute right-0 overflow-hidden"
-        ref={ref2}
-      >
+      <div className="h-screen rounded-xl border border-transparent bg-white bg-grid invert w-[94vw] flex items-center justify-end px-16 absolute right-0 overflow-hidden">
         <h1 className="absolute left-10 text-8xl xl:leading-[1.3] leading-[1] w-[55%] selection:bg-pink-400/50">
           Excited to<span className="text-violet-800"> code</span>,
           <span className="text-emerald-300"> create</span>, and
