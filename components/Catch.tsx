@@ -1,7 +1,7 @@
 import { email } from "@/constant";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { motion,  useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import useMouse from "@react-hook/mouse-position";
 
 function Catch() {
@@ -21,7 +21,7 @@ function Catch() {
     if (mouse.clientX !== null) {
       mouseXPosition = mouse.clientX;
     }
-  
+
     if (mouse.clientY !== null) {
       mouseYPosition = mouse.clientY;
     }
@@ -44,7 +44,11 @@ function Catch() {
       <div className="h-screen rounded-xl border border-transparent bg-white bg-grid invert w-[94vw] flex items-center justify-end px-16 absolute right-0 overflow-hidden">
         <h1 className="absolute left-10 text-8xl leading-[1.3] w-[55%]">
           Excited to<span className="text-violet-800"> code</span>,
-          <span className="text-emerald-300"> create</span>, and
+          <span className="text-emerald-300 selection:bg-cyan-300">
+            {" "}
+            create
+          </span>
+          , and
           <span className="text-orange-700"> contribute</span> to your
           team&apos;s
           <span className="text-lime-400"> triumphs</span>.
