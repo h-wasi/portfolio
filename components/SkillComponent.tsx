@@ -1,11 +1,7 @@
+import { Protest_Revolution } from "@/app/layout";
 import { SkillsMarque } from "./Marque";
 import { bskill, cskill, fskill, mskill, wskill } from "@/constant";
 import { Tooltip } from "@nextui-org/tooltip";
-import localFont from "next/font/local";
-const revolution = localFont({
-  src: "/fonts/ProtestRevolution-Regular.ttf",
-  display: "swap",
-});
 
 import Image from "next/image";
 
@@ -225,7 +221,7 @@ export default SkillComponent;
 function Badge({ Children }: { Children: string }) {
   return (
     <h1
-      className={`select-none absolute top-4 text-lg tracking-[.18rem] text-white left-10 font-cursive ${revolution.className}`}
+      className={`select-none absolute top-4 text-lg tracking-[.18rem] text-white left-10 font-cursive ${Protest_Revolution.className}`}
     >
       {Children}
     </h1>

@@ -5,6 +5,10 @@ const segoe = localFont({
   src: "/fonts/SegoeUI.woff2",
   display: "swap",
 });
+export const Protest_Revolution = localFont({
+  src: "/fonts/ProtestRevolution-Regular.ttf",
+  display: "swap",
+});
 export const metadata: Metadata = {
   title: "Portfolio | Hammad Wasi",
   description:
@@ -18,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={segoe.className}>{children}</body>
+      <body className={`${segoe.className} `}>{children}</body>
     </html>
   );
 }
