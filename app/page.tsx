@@ -17,19 +17,9 @@ export default function Home() {
   //loading window
   const [isOpen, setisOpen] = useState(false);
   useEffect(() => {
-    // if (localStorage.getItem("state")) {
-    //   setisOpen(true);
-    // } else {
-    //   const timer = setTimeout(() => {
-    //     setisOpen(true);
-    //     localStorage.setItem("state", `${isOpen}`);
-    //   }, 3000);
-    //   return () => clearTimeout(timer);
-    // }
     const timer = setTimeout(() => {
       setisOpen(true);
-      // localStorage.setItem("state", `${isOpen}`);
-    }, 3000);
+    }, 600);
     return () => clearTimeout(timer);
   }, [isOpen]);
 
@@ -66,7 +56,7 @@ export default function Home() {
       >
         <Loading />
       </div>
-      <main className="main-grid relative font-sans selection:bg-emerald-400/60">
+      <main className="main-grid relative selection:bg-emerald-400/60">
         <section className="bg-grid bg-cover bg-slate-300/20 grid-hero sticky top-0 z-0">
           <LinkTree />
           <div className="flex justify-center">

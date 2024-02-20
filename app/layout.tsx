@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import { Ubuntu_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Import } from "lucide-react";
+const segoe = localFont({
+  src: "/fonts/SegoeUI.woff2",
+  display: "swap",
+});
 export const metadata: Metadata = {
   title: "Portfolio | Hammad Wasi",
   description:
-    "Wasi (HE/HIM) is a seasoned Frontend Engineer with a knack for crafting captivating user interfaces that elevate user experiences. Specializing in React and Next.js, he excels in turning complex ideas into engaging, interactive web solutions.",
+    "Wasi is a seasoned Fullstack Engineer, excels in diverse tech stacks and containerization. His expertise enables him to create robust, scalable systems and his proficiency in cloud technologies leads to unparalleled digital solutions. His tech prowess and creativity ignite innovation. Curious about his skillset?",
 };
 
 export default function RootLayout({
@@ -14,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={""}>{children}</body>
+      <body className={segoe.className}>{children}</body>
     </html>
   );
 }

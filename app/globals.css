@@ -88,36 +88,5 @@
       "frontend frontend frontend frontend backend backend backend backend"
       "cloud cloud cloud web-scraping web-scraping Miscellaneous Miscellaneous Miscellaneous" !important;
   }
-  /* -----        font -                                     */
-  @font-face {
-    font-family: "Segoe UI";
-    src: url("/fonts/Segoe UI.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Segoe UI Bold";
-    src: url("/fonts/Segoe UI Bold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Segoe UI Semibold";
-    src: url("/fonts/Segoe UI Semibold 600.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-  @media screen and (max-width: 768px) {
-    .middle-grid {
-      display: grid;
-      grid-template-rows: 80vh minmax(100vh, auto) auto;
-      grid-template-areas:
-        "about"
-        "projects"
-        "skills";
-    }
-  }
+  
 }
