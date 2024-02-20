@@ -50,11 +50,11 @@ function Catch() {
           <span className="text-lime-400"> triumphs</span>.
         </h1>
         <motion.div
-          animate={{
-            x: mouseXPosition,
-            y: mouseYPosition,
-            transition: { type: "spring", mass: 0.6 },
-          }}
+          // animate={{
+          //   x: mouseXPosition,
+          //   y: mouseYPosition,
+          //   transition: { type: "spring", mass: 0.6 },
+          // }}
           // transition={spring}
           className="cursor absolute w-80 h-44 bg-graffiti bg-cover border border-gray-600 rounded-xl flex items-center justify-center invert"
           onMouseEnter={() => setIsOpen(true)}
