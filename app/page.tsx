@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { links, name, overview, pronouns, sections } from "@/constant";
@@ -11,8 +11,23 @@ import SkillComponent from "@/components/SkillComponent";
 import Projects from "@/components/Projects";
 import Catch from "@/components/Catch";
 import Contact from "@/components/Contact";
+import Loading from "@/components/loading";
 
 export default function Home() {
+  //loading window
+  const [isOpen, setisOpen] = useState(false);
+  useEffect(() => {
+    if (localStorage.getItem("state")) {
+      setisOpen(true);
+    } else {
+      const timer = setTimeout(() => {
+        setisOpen(true);
+        localStorage.setItem("state", `${isOpen}`);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
+
   //in View animation
   const ref = useRef(null);
   const ref2 = useRef(null);
@@ -36,7 +51,13 @@ export default function Home() {
 
   return (
     <ReactLenis root options={{ duration: 2 }}>
-      <main className="main-grid relative font-sans selection:bg-emerald-400/60">
+      <div
+        data-state={isOpen ? "open" : "closed"}
+        className="w-screen h-screen flex justify-center items-center fixed data-[state=open]:hidden bg-black/90 backdrop-blur-3xl z-50"
+      >
+        <Loading />
+      </div>
+      <main className="main-grid relative font-sans selection:bg-emerald-400/60 data-[state=open]:hidden">
         <section className="bg-grid bg-cover bg-slate-300/20 grid-hero sticky top-0 z-0">
           <LinkTree />
           <div className="flex justify-center">
