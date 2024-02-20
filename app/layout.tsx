@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Ubuntu_Mono } from "next/font/google";
 import localFont from "next/font/local";
-import { Import } from "lucide-react";
 const segoe = localFont({
   src: "/fonts/SegoeUI.woff2",
   display: "swap",
