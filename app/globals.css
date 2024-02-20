@@ -28,7 +28,7 @@
   /* -----        middle grid -                                     */
   .middle-grid {
     display: grid;
-    grid-template-rows: 80vh auto minmax(100vh, auto) 140vh;
+    grid-template-rows: 80vh auto minmax(80vh, auto) 140vh;
     grid-template-areas:
       "about"
       "skills"
@@ -86,7 +86,7 @@
     grid-template-areas:
       "skill skill skill skill skill skill skill skill "
       "frontend frontend frontend frontend backend backend backend backend"
-      "cloud cloud cloud web-scraping web-scraping web-scraping Miscellaneous Miscellaneous" !important;
+      "cloud cloud cloud web-scraping web-scraping Miscellaneous Miscellaneous Miscellaneous" !important;
   }
   /* -----        font -                                     */
   @font-face {

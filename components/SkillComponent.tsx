@@ -7,10 +7,10 @@ import Image from "next/image";
 function SkillComponent() {
   return (
     <div
-      className="lg:deep-gridd deep-gridm grid-skills gap-4 h-[100vh] max-lg:h-[236vh] py-4 px-6 duration-1000 bg-gradient-to-bl from-violet-800 from-10% via-indigo-900 via-40% to-violet-700 to-95% relative overflow-hidden text-white max-md:border-b max-md:shadow-xl max-md:shadow-indigo-700/70 max-md:border-slate-500/80 max-md:rounded-b-2xl"
+      className="lg:deep-gridd deep-gridm grid-skills gap-4 h-[100vh] max-lg:h-[236vh] py-4 px-6 duration-1000 bg-gradient-to-bl from-violet-800/60 from-10% via-indigo-900/70 via-40% to-violet-700/80 to-95% relative overflow-hidden text-white max-md:border-b max-md:shadow-xl max-md:shadow-indigo-700/70 max-md:border-slate-500/80 max-md:rounded-b-2xl"
       id="skills"
     >
-      <div className="absolute bg-black/10 backdrop-blur-xl w-screen h-[120vh] max-xl:h-[270vh] h bg-grid bg-cover bg-opacity-20"></div>
+      <div className="absolute backdrop-blur-2xl w-screen h-[120vh] max-xl:h-[270vh] h bg-grid bg-cover bg-opacity-20"></div>
       <SkillsMarque />
       <div className="border frontend border-slate-600/10 shadow-lg shadow-black/20 ring-1 ring-black/15 bg-black/20 backdrop-blur-xl  rounded-xl relative z-20 overflow-hidden">
         <div className="absolute -right-28 -z-10 blur-[8px] -bottom-11">

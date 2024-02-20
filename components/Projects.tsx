@@ -35,7 +35,10 @@ interface Props {
 
 function Projects() {
   return (
-    <div className="grid-projects relative bg-slate-50 px-6" id="projects">
+    <div
+      className="grid-projects relative bg-slate-50 px-6 border-b border-b-black"
+      id="projects"
+    >
       <div className="sticky h-[21vh] top-0 border-b-2 border-black/50">
         <div className="bg-slate-50 flex justify-start gap-4 sm:text-7xl text-5xl font-bold items-center h-full">
           <span>⤵</span>
@@ -73,7 +76,7 @@ function Project({
   return (
     <div
       data-state={isOpen ? "open" : "closed"}
-      className="data-[state=open]:bg-black data-[state=open]:text-white data-[state=open]:fill-white py-6 px-4 border-b border-black flex justify-between items-center max-2xl:hidden"
+      className="data-[state=open]:bg-black data-[state=open]:text-white py-6 px-4 border-b border-black flex justify-between items-center max-2xl:hidden "
     >
       <div className="flex items-center justify-center gap-3">
         <span className="flex gap-3">
