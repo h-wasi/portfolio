@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView, stagger } from "framer-motion";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { links, name, overview, pronouns, sections } from "@/constant";
 import { Marque } from "@/components/Marque";
@@ -17,22 +17,30 @@ export default function Home() {
   //loading window
   const [isOpen, setisOpen] = useState(false);
   useEffect(() => {
-    if (localStorage.getItem("state")) {
+    // if (localStorage.getItem("state")) {
+    //   setisOpen(true);
+    // } else {
+    //   const timer = setTimeout(() => {
+    //     setisOpen(true);
+    //     localStorage.setItem("state", `${isOpen}`);
+    //   }, 3000);
+    //   return () => clearTimeout(timer);
+    // }
+    const timer = setTimeout(() => {
       setisOpen(true);
-    } else {
-      const timer = setTimeout(() => {
-        setisOpen(true);
-        localStorage.setItem("state", `${isOpen}`);
-      }, 3000);
-      return () => clearTimeout(timer);
-    }
+      // localStorage.setItem("state", `${isOpen}`);
+    }, 3000);
+    return () => clearTimeout(timer);
   }, [isOpen]);
 
   //in View animation
   const ref = useRef(null);
   const ref2 = useRef(null);
+  const ref3 = useRef(null);
+
   const controls1 = useAnimation();
   const controls2 = useAnimation();
+  const controls3 = useAnimation();
 
   const useInViewAnimation = (ref: any, margin: string, controls: any) => {
     const inView = useInView(ref, { margin });
@@ -48,6 +56,7 @@ export default function Home() {
   };
   useInViewAnimation(ref, "-200px", controls1);
   useInViewAnimation(ref2, "-250px", controls2);
+  useInViewAnimation(ref3, "-260px", controls3);
 
   return (
     <ReactLenis root options={{ duration: 2 }}>
@@ -57,7 +66,7 @@ export default function Home() {
       >
         <Loading />
       </div>
-      <main className="main-grid relative font-sans selection:bg-emerald-400/60 data-[state=open]:hidden">
+      <main className="main-grid relative font-sans selection:bg-emerald-400/60">
         <section className="bg-grid bg-cover bg-slate-300/20 grid-hero sticky top-0 z-0">
           <LinkTree />
           <div className="flex justify-center">
@@ -149,22 +158,29 @@ export default function Home() {
                 id="about"
                 className="px-6 overflow-hidden h-full rounded-t-xl items-center justify-center py-4 flex flex-wrap bg-black gap-6 text-white w-full"
               >
-                <h1 className="max-lg:text-5xl lg:text-7xl sticky font-bold flex">
+                <motion.ol
+                  className="max-lg:text-5xl lg:text-7xl sticky font-bold flex"
+                  animate={controls3}
+                  variants={{
+                    visible: { opacity: 1 },
+                    hidden: { opacity: 0 },
+                  }}
+                >
                   {"About".split("").map((el, i) => (
-                    <motion.p
-                      // ref={ref3}
+                    <motion.li
+                      ref={ref3}
                       key={i}
                       initial={{ translateY: 40, opacity: 0 }}
                       animate={{ translateY: 0, opacity: 1 }}
                       transition={{
-                        delay: 0.17 * i,
+                        // delay: stagger,
                         type: "spring",
                       }}
                     >
                       {el}
-                    </motion.p>
+                    </motion.li>
                   ))}
-                </h1>
+                </motion.ol>
                 <motion.p
                   ref={ref2}
                   initial={{ opacity: 0, translateX: 200 }}

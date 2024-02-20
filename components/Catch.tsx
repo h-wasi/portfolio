@@ -30,11 +30,10 @@ function Catch() {
     return {
       default: {
         x: mouseXPosition > 0 ? mouseXPosition - 230 : mouseXPosition + 500,
-        y: mouseYPosition > 0 ? mouseYPosition - 100 : mouseYPosition + 300,
+        y: mouseYPosition > 0 ? mouseYPosition - 200 : mouseYPosition + 300,
         transition: {
           duration: 1.3,
-          spring: true,
-          mass: 2,
+          delay: 0.01,
         },
       },
     };
