@@ -15,7 +15,7 @@ let projects = [
   },
   {
     name: "Price Wise",
-    description: "self-serve product and growth analytics",
+    description: "self-serve the product and growth analytics",
     url: "https://price-wise-opal.vercel.app/",
     isDeployed: false,
     logoUrls: ["/data.svg", "/backend.svg"],
