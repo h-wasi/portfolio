@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import link from "next/link";
+import { Tooltip } from "@nextui-org/react";
 
 export function LinkComponent({
   link,
@@ -14,11 +16,38 @@ export function LinkComponent({
 }) {
   const [isHover, setIsHover] = useState("false");
 
-  return (
+  return link.name === "Resume" ? (
+    <Tooltip
+      content={"Discover My Skills and Experience – Download My Resume!"}
+      className="p-3 bg-black/30 backdrop-blur-lg w-70 border border-black/20 shadow-md rounded-xl text-white"
+    >
+      <Link
+        href={link.url}
+        target="_blank"
+        download={link.name === "Resume"}
+        onMouseEnter={() => setIsHover("true")}
+        onMouseLeave={() => setIsHover("false")}
+        className={`hover:text-white ${containerStyles}`}
+      >
+        <div className="relative z-10 overflow-hidden">
+          <motion.span
+            initial={{ translateY: 5 }}
+            animate={isHover}
+            variants={{ true: { height: childStyles, translateY: 0 } }}
+            // transition={}
+            className={`absolute top-0 bg-black w-full ${childStyles} -z-10 rounded-xl`}
+          ></motion.span>
+          <div className="flex relative max-md:text-sm justify-between border border-black gap-3 px-3 py-4 rounded-xl hover:px-8 transition-all duration-700">
+            <span>{link.name}</span>
+            <p>↗</p>
+          </div>
+        </div>
+      </Link>
+    </Tooltip>
+  ) : (
     <Link
       href={link.url}
       target="_blank"
-      download={link.name === "Resume"}
       onMouseEnter={() => setIsHover("true")}
       onMouseLeave={() => setIsHover("false")}
       className={`hover:text-white ${containerStyles}`}
