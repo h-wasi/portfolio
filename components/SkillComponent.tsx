@@ -1,9 +1,13 @@
 import { SkillsMarque } from "./Marque";
 import { bskill, cskill, fskill, mskill, wskill } from "@/constant";
 import { Tooltip } from "@nextui-org/tooltip";
+import localFont from "next/font/local";
 
 import Image from "next/image";
-import { myFont2 } from "@/app/layout";
+const myFont2 = localFont({
+  src: "../app/fonts/ProtestRevolution-Regular.ttf",
+  display: "swap",
+});
 function SkillComponent() {
   return (
     <div

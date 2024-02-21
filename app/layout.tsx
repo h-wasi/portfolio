@@ -6,10 +6,7 @@ const myFont = localFont({
   src: "./fonts/AnekLatin-Regular.ttf",
   display: "swap",
 });
-export const myFont2 = localFont({
-  src: "./fonts/ProtestRevolution-Regular.ttf",
-  display: "swap",
-});
+
 export const metadata: Metadata = {
   title: "Portfolio | Hammad Wasi",
   description:
