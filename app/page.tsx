@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setisOpen(true);
-    }, 600);
+    }, 2500);
     return () => clearTimeout(timer);
   }, [isOpen]);
 
