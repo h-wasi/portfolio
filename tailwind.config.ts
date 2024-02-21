@@ -32,7 +32,7 @@ const config: Config = {
       },
       backgroundImage: {
         grid: "url('/grid.svg')",
-        graffiti: "url('/Graffiti.png')",
+        graffiti: "url('/Graffiti1.png')",
       },
       colors: {
         border: "hsl(var(--border))",

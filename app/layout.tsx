@@ -5,10 +5,6 @@ const segoe = localFont({
   src: "/fonts/SegoeUI.woff2",
   display: "swap",
 });
-export const Protest_Revolution = localFont({
-  src: "/fonts/ProtestRevolution-Regular.ttf",
-  display: "swap",
-});
 export const metadata: Metadata = {
   title: "Portfolio | Hammad Wasi",
   description:
