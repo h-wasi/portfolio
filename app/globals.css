@@ -35,6 +35,16 @@
       "projects"
       "catch";
   }
+  @media (max-width: 768px) {
+    .middle-grid {
+      display: grid;
+      grid-template-rows: 80vh auto minmax(80vh, auto) !important;
+      grid-template-areas:
+        "about"
+        "skills"
+        "projects" !important;
+    }
+  }
   .grid-about {
     grid-area: about;
   }
@@ -88,5 +98,4 @@
       "frontend frontend frontend frontend backend backend backend backend"
       "cloud cloud cloud web-scraping web-scraping Miscellaneous Miscellaneous Miscellaneous" !important;
   }
-  
 }

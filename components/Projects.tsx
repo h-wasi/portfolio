@@ -36,10 +36,10 @@ interface Props {
 function Projects() {
   return (
     <div
-      className="grid-projects relative bg-slate-50 px-6 border-b border-b-black"
+      className="grid-projects relative bg-slate-50 px-6 max-md:shadow-lg border-b border-b-black"
       id="projects"
     >
-      <div className="sticky h-[21vh] top-0 border-b-2 border-black/50">
+      <div className="sticky h-[21vh] top-0 border-b border-black">
         <div className="bg-slate-50 flex justify-start gap-4 sm:text-7xl text-5xl font-bold items-center h-full">
           <span>⤵</span>
           <h1 className="">Projects</h1>
