@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import link from "next/link";
 import { Tooltip } from "@nextui-org/react";
+import { redirect } from "next/navigation";
 
 export function LinkComponent({
   link,
@@ -16,15 +17,14 @@ export function LinkComponent({
 }) {
   const [isHover, setIsHover] = useState("false");
 
-  return link.name === "Resume" ? (
+  return link.name === "Resume / CV" ? (
     <Tooltip
       content={"Discover My Skills and Experience – Download My Resume!"}
       className="p-3 bg-black/30 backdrop-blur-lg w-70 border border-black/20 shadow-md rounded-xl text-white"
     >
       <Link
+        onClick={() => redirect(link.url)}
         href={link.url}
-        target="_blank"
-        download={link.name === "Resume"}
         onMouseEnter={() => setIsHover("true")}
         onMouseLeave={() => setIsHover("false")}
         className={`hover:text-white ${containerStyles}`}

@@ -2,7 +2,7 @@ export const links = [
   { url: "", name: "LinkedIn" },
   { url: "https://twitter.com/h-wasi", name: "Email" },
   { url: "https://github.com/h-wasi", name: "Github" },
-  { url: "/deedy-cv.pdf", name: "Resume",  },
+  { url: "/resume.pdf", name: "Resume / CV" },
 ];
 export const email = "h-wasi@gmail.com";
 export const sections = [
