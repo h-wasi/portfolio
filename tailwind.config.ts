@@ -10,7 +10,7 @@ const config: Config = {
   ],
   prefix: "",
   theme: {
-    // fontFamily: { sans: ["Segoe UI", "Segoe UI Semibold", "Segoe UI Bold"] },
+    // fontFamily: { sans: ["Protest", "Segoe UI Semibold", "Segoe UI Bold"] },
     fontWeight: {
       light: "300",
       normal: "400",

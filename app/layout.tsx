@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
-const segoe = localFont({
-  src: "/fonts/SegoeUI.woff2",
+const myFont = localFont({
+  src: "./fonts/AnekLatin-Regular.ttf",
+  display: "swap",
+});
+export const myFont2 = localFont({
+  src: "./fonts/ProtestRevolution-Regular.ttf",
   display: "swap",
 });
 export const metadata: Metadata = {
@@ -18,7 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${segoe.className} `}>{children}</body>
+      <body className={myFont.className}>{children}</body>
     </html>
   );
 }
+//

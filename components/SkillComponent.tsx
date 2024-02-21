@@ -3,7 +3,7 @@ import { bskill, cskill, fskill, mskill, wskill } from "@/constant";
 import { Tooltip } from "@nextui-org/tooltip";
 
 import Image from "next/image";
-
+import { myFont2 } from "@/app/layout";
 function SkillComponent() {
   return (
     <div
@@ -220,7 +220,7 @@ export default SkillComponent;
 function Badge({ Children }: { Children: string }) {
   return (
     <h1
-      className={`select-none absolute top-4 text-lg tracking-[.18rem] text-white left-10 font-cursive`}
+      className={`select-none absolute top-4 text-xl tracking-[.18rem] ${myFont2.className} text-white left-10 font-cursive`}
     >
       {Children}
     </h1>
