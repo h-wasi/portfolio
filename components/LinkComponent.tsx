@@ -18,6 +18,7 @@ export function LinkComponent({
     <Link
       href={link.url}
       target="_blank"
+      download={link.name === "Resume"}
       onMouseEnter={() => setIsHover("true")}
       onMouseLeave={() => setIsHover("false")}
       className={`hover:text-white ${containerStyles}`}
@@ -26,7 +27,7 @@ export function LinkComponent({
         <motion.span
           initial={{ translateY: 5 }}
           animate={isHover}
-          variants={{ true: { height: childStyles, translateY: 0, } }}
+          variants={{ true: { height: childStyles, translateY: 0 } }}
           // transition={}
           className={`absolute top-0 bg-black w-full ${childStyles} -z-10 rounded-xl`}
         ></motion.span>

@@ -1,8 +1,8 @@
 export const links = [
   { url: "", name: "LinkedIn" },
-  { url: "https://twitter.com/h-wasi", name: "Twitter" },
+  { url: "https://twitter.com/h-wasi", name: "Email" },
   { url: "https://github.com/h-wasi", name: "Github" },
-  { url: "https://discord.com/users/1157004264837754890", name: "Discord" },
+  { url: "/deedy-cv.pdf", name: "Resume",  },
 ];
 export const email = "h-wasi@gmail.com";
 export const sections = [
